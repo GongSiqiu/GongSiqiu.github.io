@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gong Siqiu</title>
+  
+  <subtitle>USTC</subtitle>
+  <link href="/~gongsiqiu/public/atom.xml" rel="self"/>
+  
+  <link href="http://home.ustc.edu.cn/~gongsiqiu/public/"/>
+  <updated>2018-04-23T12:08:24.410Z</updated>
+  <id>http://home.ustc.edu.cn/~gongsiqiu/public/</id>
+  
+  <author>
+    <name>Gong Siqiu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Note on Tobias Holzmann&#39;s Tesla&#39;s One-Way-Valve tutorial</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/</id>
+    <published>2018-04-23T11:16:56.000Z</published>
+    <updated>2018-04-23T12:08:24.410Z</updated>
+    
+    <content type="html"><![CDATA[<p>Two weeks ago, I found Tobias Holzmann’s <a href="https://holzmann-cfd.de/openfoam/openfoam-tutorials/meshing-running/tesla-s-one-way-valve" target="_blank" rel="noopener">Tesla’s One-Way-Valve</a>. It is great but there is no explaination. So, I write this page to record some troubles I met in it and how I solved it.</p><ol><li>The first trouble I met is that the teslaOneWayValveBackup.py<br>couldn’t find the step file even if I have changed the directory.<br>I solved this problem by importing the step file to salome and<br>dumping the study, then copying the required command to<br>teslaOneWayValveBackup.py. It is interesting that sometimes there<br>is no difference between changing directory manually and it, but it<br>do work while the other not.</li><li>The second problem is that when I changed the regionSTL.stl to my<br>own, it would raise an error that there is no definition for<br>defaultFaces.<br>The first situation is that I didn’t set boundary condition. At<br>first, I just copied a stl file there, which had only one solid. So<br>I need to set the BCs.<br>The second situation is that the stl may be not waterproof. At<br>first I made groups in salome, exported them one by one and then<br>merged them to one file after adding BC (solid back …). Using surfaceCheck it, I found it wasn’t closed. In this case, snappyHexmesh generated an extra defaultFaces boundary. To solve it, I also do these above, but take notice that when make group, the main shape should be the whole object.<br>The proceduare is like this:<blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>export stl one by one<br>edit and merge<br>run</p></blockquote></li></ol><p>Up to now I just succeeded one time, maybe it is correct.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Two weeks ago, I found Tobias Holzmann’s &lt;a href=&quot;https://holzmann-cfd.de/openfoam/openfoam-tutorials/meshing-running/tesla-s-one-way-val
+      
+    
+    </summary>
+    
+      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
+    
+    
+      <category term="tesla" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>n重积分</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/21/n%E9%87%8D%E7%A7%AF%E5%88%86/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/21/n重积分/</id>
+    <published>2018-04-21T12:12:29.000Z</published>
+    <updated>2018-04-21T12:35:23.617Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="f-x-在-0-1-连续证明：-lim-n-to-infty-int-0-1-n-f-frac-x-1-x-2-cdots-x-n-n-mathop-mathrm-d-x-1-mathop-mathrm-d-x-2-cdots-mathop-mathrm-d-x-n-f-frac-1-2"><a href="#f-x-在-0-1-连续证明：-lim-n-to-infty-int-0-1-n-f-frac-x-1-x-2-cdots-x-n-n-mathop-mathrm-d-x-1-mathop-mathrm-d-x-2-cdots-mathop-mathrm-d-x-n-f-frac-1-2" class="headerlink" title="$f(x)$在$[0,1]$连续证明：$$\lim_{n \to \infty}\int_{[0,1]^n}f(\frac{x_1+x_2+\cdots+x_n}{n})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=f(\frac{1}{2})$$"></a>$f(x)$在$[0,1]$连续证明：$$\lim_{n \to \infty}\int_{[0,1]^n}f(\frac{x_1+x_2+\cdots+x_n}{n})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=f(\frac{1}{2})$$</h1><p>$$I_n=[0,1]^n$$<br>1.$$\int_{I_n}(x_1+x_2+\cdots+x_n)\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=\frac{n}{2}$$<br>2.$$\int_{I_n}(x_1^2+x_2^2+\cdots+x_n^2)\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=\frac{n}{3}$$<br>3.$$\int_{I_n}(x_1+x_2+\cdots+x_n)^2\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=\frac{n}{3}+\frac{n(n-1)}{4}$$<br>4.求$$A=\lim_{n \to \infty}\int_{[0,1]^n}f(\frac{x_1+x_2+\cdots+x_n}{n})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=f(\frac{1}{2})$$<br>注：$\mu(S_n(a))=\frac{a^n}{n!}\to 0(n\to 0),\mu(B_{2n}(a))=\frac{a^{2n}\pi^n}{n!}\to 0,\mu(I_n)=1$</p><p>记$u_n=\frac{x_1+x_2+\cdots+x_n}{n},I_n=(\lbrace |u_n-\frac{1}{2}|\leqslant\delta \bigcap I_n\rbrace)\bigcup(\lbrace |u_n-\frac{1}{2}|&gt;\delta \bigcap I_n\rbrace)$</p><p>$$<br>\begin{aligned}<br>&amp;\left | A-f(\frac{1}{2})\right | \\<br>&amp;=\left | \int_{I_n}(f(u_n)-f(\frac{1}{2})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\right | \\<br>&amp;\leqslant  \int_{I_n}\left |(f(u_n)-f(\frac{1}{2})\right |\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;=\int_{I_\delta}\left |(f(u_n)-f(\frac{1}{2})\right |\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n<br>&amp;+\int_{I_n\backslash I_\delta}\left |(f(u_n)-f(\frac{1}{2})\right |\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n<br>\end{aligned}\\<br>\forall \epsilon &gt;0,\exists \delta &gt;0,when  |x-y|&lt;0,|f(x)-f(y)|&lt;\epsilon\\<br>\therefore above&lt;\epsilon\mu(I_\delta)+2M\int_{I_n\backslash I_\delta}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>\text{下证} \lim_{n\to +\infty}<br>\int_{I_n\backslash I_\delta}1\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=0\\<br>\begin{aligned}<br>\int_{I_n\backslash I_\delta}1\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n&amp;\leqslant \int_{I_n<br>    \backslash I_\delta}\frac{(u_n-\frac{1}{2})^2}{\delta^2}\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;\leqslant\frac{1}{\delta^2}\int_{I_n}(u_n-\frac{1}{2})^2\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;=\frac{1}{\delta^2}\int_{I_n}\left[\frac{(x_1+x_2+\cdots+x_n)^2}{n^2}-\frac{x_1+\cdots+x_n}{n}+\frac{1}{4}\right]\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;=\frac{1}{12n\delta^2}\to 0<br>\end{aligned}<br>$$</p><h1 id="证明-iint-I-2-xy-xy-mathop-mathrm-d-x-mathop-mathrm-d-y-int-0-1-t-t-mathop-mathrm-d-t"><a href="#证明-iint-I-2-xy-xy-mathop-mathrm-d-x-mathop-mathrm-d-y-int-0-1-t-t-mathop-mathrm-d-t" class="headerlink" title="证明$$\iint_{I^2}(xy)^{xy}\mathop{}\mathrm{d}x\mathop{}\mathrm{d}y=\int_{0}^{1}t^t\mathop{}\mathrm{d}t$$"></a>证明$$\iint_{I^2}(xy)^{xy}\mathop{}\mathrm{d}x\mathop{}\mathrm{d}y=\int_{0}^{1}t^t\mathop{}\mathrm{d}t$$</h1><p>$$<br>\left\lbrace<br>\begin{aligned}<br>&amp;u=xy &amp;(0\leqslant u\leqslant 1)\\<br>&amp;v=x &amp;(u\leqslant x\leqslant 1)<br>\end{aligned}<br>\right.\\<br>left=-\iint u^u\frac{1}{v}\mathop{}\mathrm{d}u\mathop{}\mathrm{d}v=-\int_{0}^{1}\mathop{}\mathrm{d}u\int_{u}^{1}u^u\frac{1}{v}=-\int_{0}^{1}u^u\ln u\mathop{}\mathrm{d}u\\<br>\frac{\mathop{}\mathrm{d}{y^y}}{\mathop{}\mathrm{d}{y}}=y^y(\ln y+1)\\<br>0=\int_{0}^{1}\mathop{}\mathrm{d}(y^y)=\int_{0}^{1}y^y\mathop{}\mathrm{d}y+\int_{0}^{1}y^y\ln y\mathop{}\mathrm{d}y\\<br>\therefore -\int_{0}^{1}u^u\ln u\mathop{}\mathrm{d}u=\int_{0}^{1}u^u\mathop{}\mathrm{d}u\\<br>\therefore \iint_{I^2}(xy)^{xy}\mathop{}\mathrm{d}x\mathop{}\mathrm{d}y=\int_{0}^{1}t^t\mathop{}\mathrm{d}t<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;f-x-在-0-1-连续证明：-lim-n-to-infty-int-0-1-n-f-frac-x-1-x-2-cdots-x-n-n-mathop-mathrm-d-x-1-mathop-mathrm-d-x-2-cdots-mathop-mathrm-d-x-
+      
+    
+    </summary>
+    
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+    
+    
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
+    
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+    
+      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IYPT</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/18/IYPT/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/18/IYPT/</id>
+    <published>2018-04-18T14:50:43.000Z</published>
+    <updated>2018-04-23T12:10:48.766Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="04-10"><a href="#04-10" class="headerlink" title="04-10"></a>04-10</h1><p>选定特斯拉阀，下载CAD模型，寻找CAD软件，仿真软件。ADINA,失败。</p><h1 id="04-11"><a href="#04-11" class="headerlink" title="04-11"></a>04-11</h1><p>找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0，salome)，运行salome script失败,联系作者。</p><h1 id="04-12"><a href="#04-12" class="headerlink" title="04-12"></a>04-12</h1><p>第一次打印，太粗糙，漏水。找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0)，运行失败。更换至相应版本(5.x)。</p><h1 id="04-13"><a href="#04-13" class="headerlink" title="04-13"></a>04-13</h1><p>继续探索该例程，安装相应版本软件，例程运行成功。作者表示了解了情况，六月份前处理,此时我已解决该问题。第二次打印，加上圆柱接口，但打印出问题，模型翘边，一侧圆柱变扁。另外发现例程不能分析自己的文件，因为自己的stl没有设置bo;undary。</p><h1 id="04-14"><a href="#04-14" class="headerlink" title="04-14"></a>04-14</h1><p>安装fluent，但是虚拟机带不动……</p><h1 id="04-15"><a href="#04-15" class="headerlink" title="04-15"></a>04-15</h1><p>尝试用fluent设置boundary失败</p><h1 id="04-16"><a href="#04-16" class="headerlink" title="04-16"></a>04-16</h1><p>安装pointwise失败。第三次打印，两边翘起。</p><h1 id="04-17"><a href="#04-17" class="headerlink" title="04-17"></a>04-17</h1><p>尝试用salome导出各个group再合并，生成的boundary多出8个face，例程运行失败。安装pointwise成功，但只能导出网格，而不是设置好boundary的stl。第四次打印，调试打印机失败，从打印变形到打不出来……</p><h1 id="04-18"><a href="#04-18" class="headerlink" title="04-18"></a>04-18</h1><p>转向simflow。按教程操作，使用教程文件成功，使用自己文件失败。第五次打印，终于正常打印成功。</p><h1 id="04-19"><a href="#04-19" class="headerlink" title="04-19"></a>04-19</h1><p>打印机又出故障，喷嘴被糊。经过调整修好。安装ANSYS,似乎安装成功。测水流速差异，效果不明显。制作挡风板，用乒乓球测风速。使用吹风机风力太小，使用打气筒风力不恒定。快结束时得知可以用气垫导轨的气泵，测试风力足够，但需要一个转接口。</p><h1 id="04-23"><a href="#04-23" class="headerlink" title="04-23"></a>04-23</h1><p>今天运行openfoam成功，仿真模拟有希望了，希望以后不要出问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;04-10&quot;&gt;&lt;a href=&quot;#04-10&quot; class=&quot;headerlink&quot; title=&quot;04-10&quot;&gt;&lt;/a&gt;04-10&lt;/h1&gt;&lt;p&gt;选定特斯拉阀，下载CAD模型，寻找CAD软件，仿真软件。ADINA,失败。&lt;/p&gt;
+&lt;h1 id=&quot;04-11&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="IYPT" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/IYPT/"/>
+    
+    
+      <category term="tesla valve" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla-valve/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Supplementary task 9</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/08/Supplementary-task-9/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/08/Supplementary-task-9/</id>
+    <published>2018-04-08T07:32:06.000Z</published>
+    <updated>2018-04-08T09:56:55.580Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="设-a-1-a-2-cdots-a-n-是非零常数-f-x-1-x-2-cdots-x-n-在-mathbb-R-n-上可微-求证：存在-mathbb-R-上一元可微函数-F-s-使得-f-x-1-x-2-cdots-x-n-F-a-1x-1-a-2x-2-cdots-a-nx-n-的充分必要条件是-a-j-frac-partial-f-partial-x-i-a-i-frac-partial-f-partial-x-j-i-j-1-2-cdots-n"><a href="#设-a-1-a-2-cdots-a-n-是非零常数-f-x-1-x-2-cdots-x-n-在-mathbb-R-n-上可微-求证：存在-mathbb-R-上一元可微函数-F-s-使得-f-x-1-x-2-cdots-x-n-F-a-1x-1-a-2x-2-cdots-a-nx-n-的充分必要条件是-a-j-frac-partial-f-partial-x-i-a-i-frac-partial-f-partial-x-j-i-j-1-2-cdots-n" class="headerlink" title="设$a_1,a_2,\cdots ,a_n$是非零常数.$f(x_1,x_2,\cdots ,x_n)$在$\mathbb{R}^n$上可微.求证：存在$\mathbb{R}$上一元可微函数$F(s)$使得$f(x_1,x_2,\cdots ,x_n)=F(a_1x_1+a_2x_2+\cdots +a_nx_n)$的充分必要条件是$a_j\frac{\partial f}{\partial x_i}=a_i\frac{\partial f}{\partial x_j},i,j=1,2,\cdots ,n$"></a>设$a_1,a_2,\cdots ,a_n$是非零常数.$f(x_1,x_2,\cdots ,x_n)$在$\mathbb{R}^n$上可微.求证：存在$\mathbb{R}$上一元可微函数$F(s)$使得$f(x_1,x_2,\cdots ,x_n)=F(a_1x_1+a_2x_2+\cdots +a_nx_n)$的充分必要条件是$a_j\frac{\partial f}{\partial x_i}=a_i\frac{\partial f}{\partial x_j},i,j=1,2,\cdots ,n$</h1><h2 id="必要性："><a href="#必要性：" class="headerlink" title="必要性："></a>必要性：</h2><p>$$\frac{\partial F}{\partial x_i}=a_iF’=\frac{\partial f}{\partial x_i}\therefore a_j\frac{\partial f}{\partial x_i}=a_i\frac{\partial f}{\partial x_j}$$  </p><h2 id="充分性："><a href="#充分性：" class="headerlink" title="充分性："></a>充分性：</h2><p>设</p><p>$$<br>\left\lbrace<br>\begin{aligned}<br> u_1=&amp;a_1x_1+a_2x_2+\cdots +a_nx_n \\<br>u_2=&amp;\phantom{a_1x_1+ } a_2x_2\phantom{+\cdots +a_nx_n}\\<br>\cdots \\<br>u_n=&amp;\phantom{a_1x_1+a_2x_2+\cdots + }a_nx_n<br>\end{aligned}<br>\right.<br>$$<br>则<br>$$<br>\left\lbrace<br>\begin{aligned}<br>x_1&amp;=\frac{1}{a_1}(u_1-u_2-\cdots-u_n)\\<br>x_2&amp;=\frac{u_2}{a_2}\\<br>\cdots \\<br>x_n&amp;=\frac{u_n}{a_n}\\<br>\end{aligned}<br>\right.<br>$$</p><p>$$\therefore f=f(x_1(u_1,u_2,\cdots,u_n),x_2(u_1,u_2,\cdots,u_n),\cdots,x_n(u_1,u_2,\cdots,u_n))$$<br>$$\frac{\partial f}{\partial u_i}=<br>\left\lbrace<br>\begin{aligned}<br>\frac{1}{a_1}f_{x_1}’,i=1\\<br>-\frac{1}{a_1}f_{x_1}’+\frac{1}{a_i}f_{x_i}’,i\neq 1<br>\end{aligned}<br>\right.<br>$$<br>$$<br>\because a_j\frac{\partial f}{\partial x_i}=a_i\frac{\partial f}{\partial x_j},i,j=1,2,\cdots ,n$$<br>$$<br>\therefore \frac{1}{a_i}\frac{\partial f}{\partial x_i}=\frac{1}{a_j}\frac{\partial f}{\partial x_j},i,j=1,2,\cdots ,n<br>$$<br>$$<br>\therefore<br>\frac{\partial f}{\partial u_i}=<br>\left\lbrace<br>\begin{aligned}<br>\frac{1}{a_1}f_{x_1}’,i=1\\<br>0,i\neq 1<br>\end{aligned}<br>\right.<br>$$<br>$$<br>\therefore<br>f=F(u_1)=F(a_1x_1+a_2x_2+\cdots +a_nx_n)<br>$$</p><h1 id="若函数-u-f-x-y-z-满足恒等式-f-tx-ty-tz-t-kf-x-y-z-t-gt-0-则称-f-x-y-z-为-k-次齐次函数。试证下述关于齐次函数的欧拉定理：可微函数-f-x-y-z-为-k-次齐次函数齐次函数的充要条件是："><a href="#若函数-u-f-x-y-z-满足恒等式-f-tx-ty-tz-t-kf-x-y-z-t-gt-0-则称-f-x-y-z-为-k-次齐次函数。试证下述关于齐次函数的欧拉定理：可微函数-f-x-y-z-为-k-次齐次函数齐次函数的充要条件是：" class="headerlink" title="若函数$u=f(x,y,z)$满足恒等式$f(tx,ty,tz)=t^kf(x,y,z)(t&gt;0)$,则称$f(x,y,z)$为$k$次齐次函数。试证下述关于齐次函数的欧拉定理：可微函数$f(x,y,z)$为$k$次齐次函数齐次函数的充要条件是："></a>若函数$u=f(x,y,z)$满足恒等式$f(tx,ty,tz)=t^kf(x,y,z)(t&gt;0)$,则称$f(x,y,z)$为$k$次齐次函数。试证下述关于齐次函数的欧拉定理：可微函数$f(x,y,z)$为$k$次齐次函数齐次函数的充要条件是：</h1><p>$$xf’_x(x,y,z)+yf’_y(x,y,z)+zf’_z(x,y,z)=kf(x,y,z)$$</p><h2 id="必要性：-1"><a href="#必要性：-1" class="headerlink" title="必要性："></a>必要性：</h2><p>$$\because f(tx,ty,tz)=t^kf(x,y,z)(t&gt;0)$$<br>$$\therefore \frac{\mathop{}\mathrm{d}{f}}{\mathop{}\mathrm{d}{t}}<br>=xf’_x(tx,ty,tz)+yf’_y(tx,ty,tz)+zf’_z(tx,ty,tz)=kt^{k-1}f(x,y,z)$$<br>令$t=1$<br>$$xf’_x(x,y,z)+yf’_y(x,y,z)+zf’_z(x,y,z)=kf(x,y,z)$$</p><h2 id="充分性：-1"><a href="#充分性：-1" class="headerlink" title="充分性："></a>充分性：</h2><p>设$$\phi (t)=\frac{f(tx,ty,tz)}{t^k}$$<br>$$<br>\begin{aligned}<br>\phi’ &amp;=\frac{1}{t^{2k}}(t^k(xf’_x(tx,ty,tz)+yf’_y(tx,ty,tz)+zf’_z(tx,ty,tz))-kt^{k-1}f(tx,ty,tz))\\<br>&amp;=\frac{1}{t^{k+1}}(t(xf’_x(tx,ty,tz)+yf’_y(tx,ty,tz)+zf’_z(tx,ty,tz))-kf(tx,ty,tz))<br>&amp;=0<br>\end{aligned}<br>$$<br>$$\therefore \phi(t)=\phi(1)=f(x,y,z)$$<br>$$\therefore f(tx,ty,tz)=t^kf(x,y,z)$$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;设-a-1-a-2-cdots-a-n-是非零常数-f-x-1-x-2-cdots-x-n-在-mathbb-R-n-上可微-求证：存在-mathbb-R-上一元可微函数-F-s-使得-f-x-1-x-2-cdots-x-n-F-a-1x-1-a-2x-2-cdo
+      
+    
+    </summary>
+    
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+    
+    
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
+    
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+    
+      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>苏轼词十首</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/%E8%8B%8F%E8%BD%BC%E8%AF%8D%E5%8D%81%E9%A6%96/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/苏轼词十首/</id>
+    <published>2018-04-06T13:25:00.000Z</published>
+    <updated>2018-04-07T11:50:50.722Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="临江仙-cdot-夜归临皋"><a href="#临江仙-cdot-夜归临皋" class="headerlink" title="临江仙$\cdot$夜归临皋"></a>临江仙$\cdot$夜归临皋</h1><p>夜饮东坡醒复醉，<br>  归来仿佛三更。<br>  家童鼻息已雷鸣。<br>  敲门都不应，<br>  倚杖听江声。</p></blockquote><blockquote><p>长恨此身非我有，<br>  何时忘却营营。<br>  夜阑风静縠纹平。<br>  小舟从此逝，<br>  江海寄余生。  </p></blockquote><p>心向恬淡，身不由己。谁能忘却营营？只能长恨此身非我有。</p><blockquote><h1 id="定风波"><a href="#定风波" class="headerlink" title="定风波"></a>定风波</h1><p>莫听穿林打叶声，<br>何妨吟啸且徐行。<br>竹杖芒鞋轻胜马，<br>谁怕？<br>一蓑烟雨任平生。</p></blockquote><blockquote><p>料峭春风吹酒醒，<br>微冷，<br>山头斜照却相迎。<br>回首向来萧瑟处，<br>归去，<br>也无风雨也无晴。</p></blockquote><p>  心中无畏，何惧风雨？恬淡人生，一蓑足矣。方寸之间，也无风雨也无晴。</p><blockquote><h1 id="定风波-cdot-南海归赠王定国侍人寓娘"><a href="#定风波-cdot-南海归赠王定国侍人寓娘" class="headerlink" title="定风波$\cdot$南海归赠王定国侍人寓娘"></a>定风波$\cdot$南海归赠王定国侍人寓娘</h1><p>常羡人间琢玉郎，<br>  天应乞与点酥粮。<br>  尽道清歌传皓齿。<br>  风起。<br>  雪飞炎海变清凉。</p></blockquote><blockquote><p>万里归来颜愈少。<br>  微笑。<br>  笑时犹带岭梅香。<br>  试问岭南应不好。<br>  却道。<br>  此心安处是吾乡。</p></blockquote><p>  随遇而安。少些埋怨，此心安处是吾乡。</p><blockquote><h1 id="西江月"><a href="#西江月" class="headerlink" title="西江月"></a>西江月</h1><p>世事一场大梦，<br>  人生几度秋凉。<br>  夜来风叶已鸣廊。<br>  看取眉头鬓上。</p></blockquote><blockquote><p>酒贱常愁客少，<br>  月明多被云妨。<br>  中秋谁与共孤光。<br>  把盏凄然北望。</p></blockquote><blockquote><h1 id="西江月-cdot-平山堂"><a href="#西江月-cdot-平山堂" class="headerlink" title="西江月$\cdot$平山堂"></a>西江月$\cdot$平山堂</h1><p>三过平山堂下，<br>  半生弹指声中。<br>  十年不见老仙翁。<br>  壁上龙蛇飞动。</p></blockquote><blockquote><p>欲吊文章太守，<br>  仍歌杨柳春风。<br>  休言万事转头空。<br>  未转头时皆梦。</p></blockquote><blockquote><h1 id="永遇乐"><a href="#永遇乐" class="headerlink" title="永遇乐"></a>永遇乐</h1><p>彭城夜宿燕子楼，<br>  梦盼盼，<br>  因作此词。</p></blockquote><blockquote><p>明月如霜，<br>  好风如水，<br>  清景无限。<br>  曲港跳鱼，<br>  圆荷泻露，<br>  寂寞无人见。<br>  紞如三鼓，<br>  铿然一叶，<br>  黯黯梦云惊断。<br>  夜茫茫，<br>  重寻无处，<br>  觉来小园行遍。</p></blockquote><blockquote><p>天涯倦客，<br>  山中归路，<br>  望断故园心眼。<br>  燕子楼空，<br>  佳人何在，<br>  空锁楼中燕。<br>  古今如梦，<br>  何曾梦觉，<br>  但有旧欢新怨。<br>  异时对，<br>  黄楼夜景，<br>  为余浩叹。</p></blockquote><blockquote><h1 id="满庭芳"><a href="#满庭芳" class="headerlink" title="满庭芳"></a>满庭芳</h1><p>蜗角虚名，<br>  蝇头微利，<br>  算来著甚干忙。<br>  事皆前定，<br>  谁弱又谁强。<br>  且趁闲身未老，<br>  尽放我、些子疏狂。<br>  百年里，<br>  浑教是醉，<br>  三万六千场。</p></blockquote><blockquote><p>思量。<br>  能几许，<br>  忧愁风雨，<br>  一半相妨，<br>  又何须，<br>  抵死说短论长。<br>  幸对清风皓月，<br>  苔茵展、云幕高张。<br>  江南好，<br>  千钟美酒，<br>  一曲满庭芳。</p></blockquote><blockquote><h1 id="临江仙-cdot-送钱穆父"><a href="#临江仙-cdot-送钱穆父" class="headerlink" title="临江仙$\cdot$送钱穆父"></a>临江仙$\cdot$送钱穆父</h1><p>一别都门三改火，<br>  天涯踏尽红尘。<br>  依然一笑作春温。<br>  无波真古井，<br>  有节是秋筠。</p></blockquote><blockquote><p>惆怅孤帆连夜发，<br>  送行淡月微云。<br>  尊前不用翠眉颦。<br>  人生如逆旅，<br>  我亦是行人。</p></blockquote><blockquote><h1 id="浣溪沙"><a href="#浣溪沙" class="headerlink" title="浣溪沙"></a>浣溪沙</h1><p>细雨斜风作晓寒。<br>  淡烟疏柳媚晴滩。<br>  入淮清洛渐漫漫。</p></blockquote><blockquote><p>雪沫乳花浮午盏，<br>  蓼茸蒿笋试春盘。<br>  人间有味是清欢。</p></blockquote><blockquote><h1 id="鹧鸪天"><a href="#鹧鸪天" class="headerlink" title="鹧鸪天"></a>鹧鸪天</h1><p>林断山明竹隐墙。<br>  乱蝉衰草小池塘。<br>  翻空白鸟时时见，<br>  照水红蕖细细香。</p></blockquote><blockquote><p>村舍外，<br>  古城旁。<br>  杖藜徐步转斜阳。<br>  殷勤昨夜三更雨，<br>  又得浮生一日凉。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;h1 id=&quot;临江仙-cdot-夜归临皋&quot;&gt;&lt;a href=&quot;#临江仙-cdot-夜归临皋&quot; class=&quot;headerlink&quot; title=&quot;临江仙$\cdot$夜归临皋&quot;&gt;&lt;/a&gt;临江仙$\cdot$夜归临皋&lt;/h1&gt;&lt;p&gt;夜饮东坡醒复醉，&lt;br
+      
+    
+    </summary>
+    
+      <category term="collection" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/collection/"/>
+    
+    
+      <category term="Su Shi" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Su-Shi/"/>
+    
+      <category term="ci" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/ci/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A tour to Nanjing</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/A-tour-to-Nanjing/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/A-tour-to-Nanjing/</id>
+    <published>2018-04-06T13:22:18.000Z</published>
+    <updated>2018-04-07T15:27:52.977Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Mooring on River Qinhua -Du Mu<br>translated by 曾培慈 (Betty Tseng)<br>The river is cold and enshrouded in a fog,<br>the river sand enshrouded in moonlight,<br>I’ve come to moor on the Qinhuai after dark where there are cabarets nearby.<br>Courtesans perceive not the sorrow of a perished empire,<br>Across the river singing of A Flourishing Backyard continues into the night.  </p></blockquote><p>  It was drizzling on the first day. The Qinhuai River seemed to be enveloped in a layer of smoke. Walking along the Qinhuai River, I experienced the atmosphere of the culture.</p><h1 id="Wuyi-Lane"><a href="#Wuyi-Lane" class="headerlink" title="Wuyi Lane"></a>Wuyi Lane</h1><blockquote><p>Wuyi or Swallows’ Lane<br>–Liu Yuxi<br>translated by 蔡廷干<br>Beside the Zhuque Bridge wild flowers thickly grow,<br>Along the Wuyi Lane the sun is setting low.<br>Where once the swallows knew the mansions of the great,<br>They now to humbler homes would fly to nest and mate.</p></blockquote><p>In the museum of Wang Dan and Xie An, many exhibitions were displayed there telling the history of the two distinguished family.<br>The model of the war of Feishui told us the military ability of Xi An, while the Preface to the Orchid Pavilion Collection shown us the literary talent of Wan Xizhi.</p><h1 id="Confucius-Temple"><a href="#Confucius-Temple" class="headerlink" title="Confucius Temple"></a>Confucius Temple</h1><p>Walking into the Confucius Temple, I was greeted with eight status of Confucius’ students.<br>People value Confucius as the teacher for all ages. He tried his best to promote his outlook in politics – kindheartedness in his all life.<br>He didn’t achieve his goal, however, he taught a large number of students successfully.<br>People admire him after his death, but something is rotted, especially after the appearance of imperial examination.<br>The rulers use him opinion to rule people’s minds while people make a courtesy call to him to pray for scholarly honour and official rank.<br>After the introduction exhibition of Confucius, the temple is just a display of imperial examination.<br>There are things about the examination and how people educate children to study hard for it on display.</p><h1 id="Office-of-the-President"><a href="#Office-of-the-President" class="headerlink" title="Office of the President"></a>Office of the President</h1><p>Although it was pouring in the afternoon, there were tons of people visiting the Office of the President.<br>The Office of the President is not tall, the main building is three-floor and president’s office is located on the second floor.<br>Walking through the axle wire, I visited the history of Jiang Jieshi and Hong Xiuquan. Passing the display halls one by one, the process of the set up of nationalist party shown before my eyes.<br>Swept forward by crowds, I went up stair and visited the office one by one. They are just common ones. Expectation became flat. </p><h1 id="the-Sun-Yat-sen-Mausoleum"><a href="#the-Sun-Yat-sen-Mausoleum" class="headerlink" title="the Sun Yat-sen Mausoleum"></a>the Sun Yat-sen Mausoleum</h1><h2 id="The-Whole-World-As-One-Community"><a href="#The-Whole-World-As-One-Community" class="headerlink" title="The Whole World As One Community"></a>The Whole World As One Community</h2><p>Passed the dense groves, I arrived at the mausoleum.<br>Upside there are a series of footsteps.<br>Going up step by step, the boards shown up one by one.–Universal love; The Whole World As One Community; Nation, Civil Rights, The People’s livelihood.<br>Sun Yat-Sen devoted his all life in establishing a new China. Although he didn’t finish his dream, the successors achieced his goal at last.<br>His devotion will be remembered forever.</p><h1 id="Ming-Tomb"><a href="#Ming-Tomb" class="headerlink" title="Ming Tomb"></a>Ming Tomb</h1><p>Ming Tomb is the tomb of the first emperor of Ming dynasty – Zhu Yuanzhang</p><h1 id="Sun-Quan-Memorial-Hall"><a href="#Sun-Quan-Memorial-Hall" class="headerlink" title="Sun Quan Memorial Hall"></a>Sun Quan Memorial Hall</h1><p>–Son should like Sun Zhongmou<br>A teenager born of a hero since ancient times. Sun Quan is such a teenager hero. He succeed Wu from his brother when he was just 18 years old.<br>He has the talent of choosing a person for a job and honours worthy men of letters.<br>With the help of Zhou Yu, Lu Su, Lu Xun and so on, using the strategy that conservative view of the world in the east of the Yangtze River,<br>he can keep the one third of the world.</p><h1 id="The-Memorial-Hall-of-The-Victims-in-Nanjing-Massacre-by-Japanese-Invaders"><a href="#The-Memorial-Hall-of-The-Victims-in-Nanjing-Massacre-by-Japanese-Invaders" class="headerlink" title="The Memorial Hall of The Victims in Nanjing Massacre by Japanese Invaders"></a>The Memorial Hall of The Victims in Nanjing Massacre by Japanese Invaders</h1><p>Outside the hall, there were a lage amount of people. They waited in a circuitous line, hopefully, impatiently, anxiously, and finally desperately.<br>Some people just gave up waiting before the gate of the hall. The square was full of people. The statu–Family Ruined saw the desire of the people.<br>The statu, which told a tragic story of a womon, was just a start of the sad atmosphere.</p><blockquote><p>Her husband would never be alive;<br>Her child would never be alive.<br>Only left the wife raped by the evil.<br>Oh, my god!</p></blockquote><p>After a long time waiting, I finally entered the gate, but there were still a lot of people waiting in front of the hall.<br>I decided to give up and just visit around it.<br>There was a display of the families of survivors. These are one and another tragic stories.<br>Many of them now lives a normal life, but the horrible memory can never be wiped away.<br>A mass grave is near it. More than 300 skeletons were found in this 150 $m^2$ grave.<br>What a svage act it is!<br>Finally, I saw the peace god statu. Peace is invaluable and hard-won.</p><blockquote><p>That was a tumul tuous year<br>May you have beautiful years in your afterlife</p></blockquote><blockquote><p>If one day we can meet, I must tell you<br>Mountains and rivers still exist,<br>The country is prosperous and the people are at peace</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Mooring on River Qinhua -Du Mu&lt;br&gt;translated by 曾培慈 (Betty Tseng)&lt;br&gt;The river is cold and enshrouded in a fog,&lt;br&gt;the river
+      
+    
+    </summary>
+    
+      <category term="tour" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/tour/"/>
+    
+    
+      <category term="Nan jing" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Nan-jing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Align underline in LaTeX</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/03/31/underline/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/03/31/underline/</id>
+    <published>2018-03-31T14:12:44.000Z</published>
+    <updated>2018-04-04T04:31:53.850Z</updated>
+    
+    <content type="html"><![CDATA[<p>These days, I had trouble in aligning two fractions, one of which has an underlined numerator while the other<br>doesn’t.Just like this.<br>$$\frac{\partial \underline{\phi }}{\partial y}\frac{\partial f}{\partial y}$$<br>Finally I found a solution to it, using <strong>\vphantom</strong><br>$$\frac{\partial \underline{\phi }}{\partial x}\frac{\partial f\vphantom{\underline{\phi }}}{\partial x}$$</p><p>The description of \vphantom is</p><p>The box created by \vphantom has the height and depth of its argument,<br>but its width is zero (so it doesn’t contribute to any horizontal spacing issues).<br>In other words, \hphantom creates vertical space equal to that produced by its argument,<br>but doesn’t create any horizontal space.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;These days, I had trouble in aligning two fractions, one of which has an underlined numerator while the other&lt;br&gt;doesn’t.Just like this.&lt;
+      
+    
+    </summary>
+    
+      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/LaTex/"/>
+    
+    
+      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/LaTex/"/>
+    
+  </entry>
+  
+</feed>
