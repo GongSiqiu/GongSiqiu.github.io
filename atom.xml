@@ -3,11 +3,11 @@
   <title>Gong Siqiu</title>
   
   <subtitle>USTC</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/~gongsiqiu/public/atom.xml" rel="self"/>
   
-  <link href="https://github.com/AutumnCrane/"/>
-  <updated>2018-04-23T12:08:24.410Z</updated>
-  <id>https://github.com/AutumnCrane/</id>
+  <link href="http://home.ustc.edu.cn/~gongsiqiu/public/"/>
+  <updated>2018-05-20T12:22:06.056Z</updated>
+  <id>http://home.ustc.edu.cn/~gongsiqiu/public/</id>
   
   <author>
     <name>Gong Siqiu</name>
@@ -17,13 +17,94 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Note on Tobias Holzmann&#39;s Tesla&#39;s One-Way-Valve tutorial</title>
-    <link href="https://github.com/AutumnCrane/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/"/>
-    <id>https://github.com/AutumnCrane/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/</id>
-    <published>2018-04-23T11:16:56.000Z</published>
-    <updated>2018-04-23T12:08:24.410Z</updated>
+    <title>梯度，散度，旋度</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/20/%E6%A2%AF%E5%BA%A6%EF%BC%8C%E6%95%A3%E5%BA%A6%EF%BC%8C%E6%97%8B%E5%BA%A6/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/20/梯度，散度，旋度/</id>
+    <published>2018-05-20T12:16:41.000Z</published>
+    <updated>2018-05-20T12:22:06.056Z</updated>
     
-    <content type="html"><![CDATA[<p>Two weeks ago, I found Tobias Holzmann’s <a href="https://holzmann-cfd.de/openfoam/openfoam-tutorials/meshing-running/tesla-s-one-way-valve" target="_blank" rel="noopener">Tesla’s One-Way-Valve</a>. It is great but there is no explaination. So, I write this page to record some troubles I met in it and how I solved it.</p><ol><li>The first trouble I met is that the teslaOneWayValveBackup.py<br>couldn’t find the step file even if I have changed the directory.<br>I solved this problem by importing the step file to salome and<br>dumping the study, then copying the required command to<br>teslaOneWayValveBackup.py. It is interesting that sometimes there<br>is no difference between changing directory manually and it, but it<br>do work while the other not.</li><li>The second problem is that when I changed the regionSTL.stl to my<br>own, it would raise an error that there is no definition for<br>defaultFaces.<br>The first situation is that I didn’t set boundary condition. At<br>first, I just copied a stl file there, which had only one solid. So<br>I need to set the BCs.<br>The second situation is that the stl may be not waterproof. At<br>first I made groups in salome, exported them one by one and then<br>merged them to one file after adding BC (solid back …). Using surfaceCheck it, I found it wasn’t closed. In this case, snappyHexmesh generated an extra defaultFaces boundary. To solve it, I also do these above, but take notice that when make group, the main shape should be the whole object.<br>The proceduare is like this:<blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>export stl one by one<br>edit and merge<br>run</p></blockquote></li></ol><p>Up to now I just succeeded one time, maybe it is correct.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="设-vec-v-vec-omega-散度和旋度均相等，问：在什么条件下，-vec-v-vec-omega"><a href="#设-vec-v-vec-omega-散度和旋度均相等，问：在什么条件下，-vec-v-vec-omega" class="headerlink" title="设$\vec{v},\vec{\omega}$散度和旋度均相等，问：在什么条件下，$\vec{v}=\vec{\omega}$"></a>设$\vec{v},\vec{\omega}$散度和旋度均相等，问：在什么条件下，$\vec{v}=\vec{\omega}$</h1><p>问题等价于当<br>$$<br>\nabla\times\vec{v}=0,\nabla\cdot\vec{v}=0<br>$$<br>什么条件下$\vec{v}=0$?<br>设$\Omega\subset\mathbb{R}^3$区域。$\partial \Omega$为光滑曲面。$\vec{v}$是$\overline{\Omega}$上的向量场<br>$$<br>\nabla\times\vec{v}=0,\nabla\cdot\vec{v}=0<br>$$<br>设$\vec{v}=P\vec{i}+Q\vec{j}+R\vec{k}$</p><p>$$<br>\nabla\times\vec{v}=0\Rightarrow<br>\left\lbrace<br>\begin{aligned}<br>\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}=0\\<br>\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}=0\\<br>\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=0<br>\end{aligned}<br>\right.<br>$$<br>$$<br>\nabla\cdot\vec{v}=0\Rightarrow<br>\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}=0<br>$$<br>$$<br>\frac{\partial \nabla\cdot\vec{v}}{\partial x}=\Delta P=0<br>$$<br>$$<br>\Delta P=\Delta Q=\Delta R=0<br>$$<br>命题：设$f,\overline{\Omega}\rightarrow\mathbb{R}$光滑函数$\Delta f=0$且$f|_{\partial\Omega}\equiv 0\rightarrow f\equiv 0$</p><p>证明<br>$$<br>\nabla\cdot(f\nabla f)=\nabla f\cdot\nabla f+f\nabla\cdot\nabla f=|\nabla f|^2+f\nabla f=|\nabla f|^2<br>$$<br>积分<br>$$\int_\Omega|\nabla f|^2\mathop{}\mathrm{d}V=\int_\Omega\nabla \cdot(f\nabla f)\mathop{}\mathrm{d}V=\int_{\partial\Omega}(f\nabla f)\mathop{}\mathrm{d}\vec{S}=0\rightarrow|\nabla f|\equiv 0$$<br>所以$f$是常值函数</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;设-vec-v-vec-omega-散度和旋度均相等，问：在什么条件下，-vec-v-vec-omega&quot;&gt;&lt;a href=&quot;#设-vec-v-vec-omega-散度和旋度均相等，问：在什么条件下，-vec-v-vec-omega&quot; class=&quot;headerl
+      
+    
+    </summary>
+    
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+    
+    
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+    
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenFoam 模型的注释</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/01/OpenFoam-%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%B3%A8%E9%87%8A/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/01/OpenFoam-模型的注释/</id>
+    <published>2018-05-01T10:21:02.000Z</published>
+    <updated>2018-05-01T10:49:53.672Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="incompressible-不可压缩流体"><a href="#incompressible-不可压缩流体" class="headerlink" title="incompressible 不可压缩流体"></a>incompressible 不可压缩流体</h1><h2 id="pimpleFoam"><a href="#pimpleFoam" class="headerlink" title="pimpleFoam"></a>pimpleFoam</h2><h2 id="LES"><a href="#LES" class="headerlink" title="LES"></a>LES</h2><p>大涡模拟是对紊流脉动（或紊流涡）的一种空间平均，也就是通过某种滤波函数将大尺度的涡和小尺度的涡分离开，大尺度的涡直接模拟，小尺度的涡用模型来封闭。大涡模拟成立的理论基础是在高雷诺数紊流中存在惯性子尺度的涡，该尺度的涡具有统计意义上的各项同性的性质，理论上它既不含能量也不耗散能量，它将含能尺度的涡的能量传递给耗散尺度的涡</p><h2 id="laminar"><a href="#laminar" class="headerlink" title="laminar"></a>laminar</h2><p>层流（laminar flow）是流体的一种流动状态，它作层状的流动。流体在管内低速流动时呈现为层流，其质点沿着与管轴平行的方向作平滑直线运动。流体的流速在管中心处最大，其近壁处最小。管内流体的平均流速与最大流速之比等于0.5。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;incompressible-不可压缩流体&quot;&gt;&lt;a href=&quot;#incompressible-不可压缩流体&quot; class=&quot;headerlink&quot; title=&quot;incompressible 不可压缩流体&quot;&gt;&lt;/a&gt;incompressible 不可压缩流体&lt;/
+      
+    
+    </summary>
+    
+      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
+    
+    
+      <category term="OpenFoam" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/OpenFoam/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Analysis quiz</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/28/Analysis-quiz/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/28/Analysis-quiz/</id>
+    <published>2018-04-28T14:37:02.000Z</published>
+    <updated>2018-04-29T02:53:29.955Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-设-v-n-是-n-维球体-lbrace-x-2-1-cdots-x-n-2-leqslant-1-rbrace-的体积，求-v-n-的最大值"><a href="#1-设-v-n-是-n-维球体-lbrace-x-2-1-cdots-x-n-2-leqslant-1-rbrace-的体积，求-v-n-的最大值" class="headerlink" title="1.  设$v(n)$ 是$n$ 维球体$\lbrace x^2_1 +\cdots +x_n^2\leqslant 1\rbrace$ 的体积，求$v(n)$ 的最大值"></a>1.  设$v(n)$ 是$n$ 维球体$\lbrace x^2_1 +\cdots +x_n^2\leqslant 1\rbrace$ 的体积，求$v(n)$ 的最大值</h1><p>$$B_n(a)=\lbrace (x_1,\cdots ,x_n):x^2_1 +\cdots +x_n^2\leqslant 1\rbrace<br>$$<br>易证$$\mu(B_n(a))=\int_{B_n(a)}\mathop{}\mathrm{d}\mu=a^n\int_{B_n(1))}\mathop{}\mathrm{d}\mu=a^n\mu(B_n(1))$$<br>$$<br>\begin{aligned}<br>\mu(B_n(1))&amp;=\int_{B_n(1))}\mathop{}\mathrm{d}\mu=\iint_{u^2+v^2}\mathop{}\mathrm{d}u\mathop{}\mathrm{d}v\idotsint_{B_{n-2}}(\sqrt{1-u^2-v^2})\mathop{}\mathrm{d}x_1\cdots\mathop{}\mathrm{d}x_{n-2}\\<br>&amp;=\mu(B_{n-2}(1))\iint_{u^2+v^2\leqslant 1}(1-u^2-v^2)^{(n-2)/2}\\<br>&amp;=\frac{2\pi}{n}\mu(B_{n-2}(1))<br>\end{aligned}<br>$$<br>当$V(n)$最大时，$n$只可能取$5,6,7(\frac{2\pi}{n}\approx 1)$</p><p>$$V(5)=\frac{8\pi^2}{15},V(6)=\frac{\pi^2}{6},V(7)=\frac{16\pi^3}{105}\\<br>\therefore V_{max}=V(5)=\frac{8\pi^2}{15}$$</p><h1 id="2-设-r-theta-varphi-是-mathbb-R-3-的球坐标-，-S-r-r-theta-varphi-theta-varphi-in-D-是-mathbb-R-3-曲面方程，求该曲面面积"><a href="#2-设-r-theta-varphi-是-mathbb-R-3-的球坐标-，-S-r-r-theta-varphi-theta-varphi-in-D-是-mathbb-R-3-曲面方程，求该曲面面积" class="headerlink" title="2.  设$(r,\theta,\varphi)$ 是$\mathbb{R}^3$ 的球坐标 ，$S: r=r(\theta ,\varphi)$$[(\theta ,\varphi \in D)]$是$\mathbb{R}^3$ 曲面方程，求该曲面面积"></a>2.  设$(r,\theta,\varphi)$ 是$\mathbb{R}^3$ 的球坐标 ，$S: r=r(\theta ,\varphi)$$[(\theta ,\varphi \in D)]$是$\mathbb{R}^3$ 曲面方程，求该曲面面积</h1><p><img src="http://home.ustc.edu.cn/~gongsiqiu/public/images/ball.png" alt="solution"></p><h1 id="3-设-a-gt-b-gt-0-，求椭圆盘-frac-x-2-a-2-frac-y-2-b-2-leqslant-1-与-frac-x-2-b-2-frac-y-2-a-2-leqslant-1-公共部分的面积-要求用第二型曲线积分计算"><a href="#3-设-a-gt-b-gt-0-，求椭圆盘-frac-x-2-a-2-frac-y-2-b-2-leqslant-1-与-frac-x-2-b-2-frac-y-2-a-2-leqslant-1-公共部分的面积-要求用第二型曲线积分计算" class="headerlink" title="3.  设$a&gt;b&gt;0$ ，求椭圆盘$\frac{x^2}{a^2}+\frac{y^2}{b^2}\leqslant 1$ 与 $\frac{x^2}{b^2}+\frac{y^2}{a^2}\leqslant 1$公共部分的面积(要求用第二型曲线积分计算)"></a>3.  设$a&gt;b&gt;0$ ，求椭圆盘$\frac{x^2}{a^2}+\frac{y^2}{b^2}\leqslant 1$ 与 $\frac{x^2}{b^2}+\frac{y^2}{a^2}\leqslant 1$公共部分的面积(要求用第二型曲线积分计算)</h1><p>$$<br>\int_D\mathop{}\mathrm{d}S=\oint_{\partial D}x\mathop{}\mathrm{d}y<br>$$<br>$$<br>\therefore S=4\left(\int_{0}^{\arctan a/b}ab\cos^2\theta\mathop{}\mathrm{d}\theta+\int_{\arctan b/a}^{\frac{\pi}{2}}ab\cos^2\theta\mathop{}\mathrm{d}\theta\right)=\pi+2ab(\arctan\frac{a}{b}-\arctan\frac{b}{a})<br>$$</p><h1 id="4-设-f-g-mathbb-R-3-mapsto-mathbb-R-一阶连续可微，且-nabla-f-parallel-nabla-g-nabla-f-neq-0-nabla-g-neq-0-P-0-in-mathbb-R-3-f-P-0-g-P-0-0-，证明在-P-0-附近，等值面-lbrace-f-0-rbrace-与等值面-lbrace-g-0-rbrace-相等"><a href="#4-设-f-g-mathbb-R-3-mapsto-mathbb-R-一阶连续可微，且-nabla-f-parallel-nabla-g-nabla-f-neq-0-nabla-g-neq-0-P-0-in-mathbb-R-3-f-P-0-g-P-0-0-，证明在-P-0-附近，等值面-lbrace-f-0-rbrace-与等值面-lbrace-g-0-rbrace-相等" class="headerlink" title="4.  设$f,g\ \mathbb{R}^3 \mapsto \mathbb{R}$ 一阶连续可微，且 $\nabla f\parallel \nabla g$,$\nabla f\neq 0$,$\nabla g\neq 0 $,$ P_0\in\mathbb{R}^3$, $f(P_0)=g(P_0)=0$，证明在$P_0$ 附近，等值面$\lbrace f=0\rbrace$ 与等值面 $\lbrace g=0\rbrace$相等"></a>4.  设$f,g\ \mathbb{R}^3 \mapsto \mathbb{R}$ 一阶连续可微，且 $\nabla f\parallel \nabla g$,$\nabla f\neq 0$,$\nabla g\neq 0 $,$ P_0\in\mathbb{R}^3$, $f(P_0)=g(P_0)=0$，证明在$P_0$ 附近，等值面$\lbrace f=0\rbrace$ 与等值面 $\lbrace g=0\rbrace$相等</h1><p>设$P_0(x_0,y_0,z_0)$,不妨设$\frac{\partial f}{\partial z}\neq 0\Longrightarrow$在$P_0$的邻域$f(P)=f(P_0)=0$有解$z=z_1(x,y)\Longrightarrow$等值面${r}_1(x,y)=(x,y,z_1(x,y))$,由$\nabla f\parallel \nabla g\Longrightarrow\frac{\partial g}{\partial z}\neq 0\Longrightarrow\lbrace g=0\rbrace$等值面${r}_2(x,y)=(x,y,z_2(x,y))$要证$z_1(x,y)=z_2(x,y)$<br>$$<br>\begin{aligned}<br>z_0&amp;=z_1(x_0,y_0)\mapsto {r}_1(x_0,y_0)=P_0\\<br>z_0&amp;=z_2(x_0,y_0)\mapsto {r}_2(x_0,y_0)=P_0\\<br>\frac{\partial z_1}{\partial x}&amp;=-\frac{\partial f}{\partial x}/\frac{\partial f}{\partial z}\\<br>\frac{\partial z_2}{\partial x}&amp;=-\frac{\partial g}{\partial x}/\frac{\partial g}{\partial z}\\<br>\frac{\partial z_1}{\partial x}&amp;=\frac{\partial z_2}{\partial x}\\<br>\text{同理:}\frac{\partial z_1}{\partial y}&amp;=\frac{\partial z_2}{\partial y}\\<br>\therefore \text{等值面相等}<br>\end{aligned}<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-设-v-n-是-n-维球体-lbrace-x-2-1-cdots-x-n-2-leqslant-1-rbrace-的体积，求-v-n-的最大值&quot;&gt;&lt;a href=&quot;#1-设-v-n-是-n-维球体-lbrace-x-2-1-cdots-x-n-2-leqsla
+      
+    
+    </summary>
+    
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+    
+    
+      <category term="quiz" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/quiz/"/>
+    
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+    
+      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Note on Tobias Holzmann&#39;s Tesla&#39;s One-Way-Valve tutorial</title>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/</id>
+    <published>2018-04-23T11:16:56.000Z</published>
+    <updated>2018-06-28T13:36:10.577Z</updated>
+    
+    <content type="html"><![CDATA[<p>Two weeks ago, I found Tobias Holzmann’s <a href="https://holzmann-cfd.de/openfoam/openfoam-tutorials/meshing-running/tesla-s-one-way-valve" target="_blank" rel="noopener">Tesla’s One-Way-Valve</a>. It is great but there is no explaination. So, I write this page to record some troubles I met in it and how I solved it.</p><ol><li><p>The first trouble I met is that the teslaOneWayValveBackup.py<br>couldn’t find the step file even if I have changed the directory.<br>I solved this problem by importing the step file to salome and<br>dumping the study, then copying the required command to<br>teslaOneWayValveBackup.py. It is interesting that sometimes there<br>is no difference between changing directory manually and it, but it<br>do work while the other not.</p><p><strong>The reality is that I had inputted the wrong address.</strong></p></li><li><p>The second problem is that when I changed the regionSTL.stl to my<br>own, it would raise an error that there is no definition for<br>defaultFaces.<br>The first situation is that I didn’t set boundary condition. At<br>first, I just copied a stl file there, which had only one solid. So<br>I need to set the BCs.<br>The second situation is that the stl may be not waterproof. At<br>first I made groups in salome, exported them one by one and then<br>merged them to one file after adding BC (solid back …). Using surfaceCheck it, I found it wasn’t closed. In this case, snappyHexmesh generated an extra defaultFaces boundary. To solve it, I also do these above, but take notice that when make group, the main shape should be the whole object.<br>The proceduare is like this:</p><blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>export stl one by one<br>edit and merge<br>run</p></blockquote><p>Up to now I just succeeded one time, maybe it is correct.</p><p><strong>Finally I gave up.</strong> I use gmsh or Salome to mesh it and set boundary<br>conditons. It is easy to use gmsh. So I want to note how to mesh in<br>Salome.</p><blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>Mesh -&gt;Create Mesh , choose NETGEN-1D-2D-3D<br>Create Group from Geometry<br>Compute<br>Export Mesh as UNV file<br>ideasUnvToFoam<br>edit the boundary<br>pimpleFoam</p></blockquote></li></ol>]]></content>
     
     <summary type="html">
     
@@ -34,19 +115,19 @@
     
     </summary>
     
-      <category term="CFD" scheme="https://github.com/AutumnCrane/categories/CFD/"/>
+      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
     
     
-      <category term="tesla" scheme="https://github.com/AutumnCrane/tags/tesla/"/>
+      <category term="tesla" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla/"/>
     
   </entry>
   
   <entry>
     <title>n重积分</title>
-    <link href="https://github.com/AutumnCrane/2018/04/21/n%E9%87%8D%E7%A7%AF%E5%88%86/"/>
-    <id>https://github.com/AutumnCrane/2018/04/21/n重积分/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/21/n%E9%87%8D%E7%A7%AF%E5%88%86/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/21/n重积分/</id>
     <published>2018-04-21T12:12:29.000Z</published>
-    <updated>2018-04-21T12:35:23.617Z</updated>
+    <updated>2018-05-20T12:18:28.741Z</updated>
     
     <content type="html"><![CDATA[<h1 id="f-x-在-0-1-连续证明：-lim-n-to-infty-int-0-1-n-f-frac-x-1-x-2-cdots-x-n-n-mathop-mathrm-d-x-1-mathop-mathrm-d-x-2-cdots-mathop-mathrm-d-x-n-f-frac-1-2"><a href="#f-x-在-0-1-连续证明：-lim-n-to-infty-int-0-1-n-f-frac-x-1-x-2-cdots-x-n-n-mathop-mathrm-d-x-1-mathop-mathrm-d-x-2-cdots-mathop-mathrm-d-x-n-f-frac-1-2" class="headerlink" title="$f(x)$在$[0,1]$连续证明：$$\lim_{n \to \infty}\int_{[0,1]^n}f(\frac{x_1+x_2+\cdots+x_n}{n})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=f(\frac{1}{2})$$"></a>$f(x)$在$[0,1]$连续证明：$$\lim_{n \to \infty}\int_{[0,1]^n}f(\frac{x_1+x_2+\cdots+x_n}{n})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=f(\frac{1}{2})$$</h1><p>$$I_n=[0,1]^n$$<br>1.$$\int_{I_n}(x_1+x_2+\cdots+x_n)\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=\frac{n}{2}$$<br>2.$$\int_{I_n}(x_1^2+x_2^2+\cdots+x_n^2)\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=\frac{n}{3}$$<br>3.$$\int_{I_n}(x_1+x_2+\cdots+x_n)^2\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=\frac{n}{3}+\frac{n(n-1)}{4}$$<br>4.求$$A=\lim_{n \to \infty}\int_{[0,1]^n}f(\frac{x_1+x_2+\cdots+x_n}{n})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=f(\frac{1}{2})$$<br>注：$\mu(S_n(a))=\frac{a^n}{n!}\to 0(n\to 0),\mu(B_{2n}(a))=\frac{a^{2n}\pi^n}{n!}\to 0,\mu(I_n)=1$</p><p>记$u_n=\frac{x_1+x_2+\cdots+x_n}{n},I_n=(\lbrace |u_n-\frac{1}{2}|\leqslant\delta \bigcap I_n\rbrace)\bigcup(\lbrace |u_n-\frac{1}{2}|&gt;\delta \bigcap I_n\rbrace)$</p><p>$$<br>\begin{aligned}<br>&amp;\left | A-f(\frac{1}{2})\right | \\<br>&amp;=\left | \int_{I_n}(f(u_n)-f(\frac{1}{2})\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\right | \\<br>&amp;\leqslant  \int_{I_n}\left |(f(u_n)-f(\frac{1}{2})\right |\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;=\int_{I_\delta}\left |(f(u_n)-f(\frac{1}{2})\right |\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n<br>&amp;+\int_{I_n\backslash I_\delta}\left |(f(u_n)-f(\frac{1}{2})\right |\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n<br>\end{aligned}\\<br>\forall \epsilon &gt;0,\exists \delta &gt;0,when  |x-y|&lt;0,|f(x)-f(y)|&lt;\epsilon\\<br>\therefore above&lt;\epsilon\mu(I_\delta)+2M\int_{I_n\backslash I_\delta}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>\text{下证} \lim_{n\to +\infty}<br>\int_{I_n\backslash I_\delta}1\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n=0\\<br>\begin{aligned}<br>\int_{I_n\backslash I_\delta}1\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n&amp;\leqslant \int_{I_n<br>    \backslash I_\delta}\frac{(u_n-\frac{1}{2})^2}{\delta^2}\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;\leqslant\frac{1}{\delta^2}\int_{I_n}(u_n-\frac{1}{2})^2\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;=\frac{1}{\delta^2}\int_{I_n}\left[\frac{(x_1+x_2+\cdots+x_n)^2}{n^2}-\frac{x_1+\cdots+x_n}{n}+\frac{1}{4}\right]\mathop{}\mathop{}\mathrm{d}x_1\mathop{}\mathrm{d}x_2\cdots\mathop{}\mathrm{d}x_n\\<br>&amp;=\frac{1}{12n\delta^2}\to 0<br>\end{aligned}<br>$$</p><h1 id="证明-iint-I-2-xy-xy-mathop-mathrm-d-x-mathop-mathrm-d-y-int-0-1-t-t-mathop-mathrm-d-t"><a href="#证明-iint-I-2-xy-xy-mathop-mathrm-d-x-mathop-mathrm-d-y-int-0-1-t-t-mathop-mathrm-d-t" class="headerlink" title="证明$$\iint_{I^2}(xy)^{xy}\mathop{}\mathrm{d}x\mathop{}\mathrm{d}y=\int_{0}^{1}t^t\mathop{}\mathrm{d}t$$"></a>证明$$\iint_{I^2}(xy)^{xy}\mathop{}\mathrm{d}x\mathop{}\mathrm{d}y=\int_{0}^{1}t^t\mathop{}\mathrm{d}t$$</h1><p>$$<br>\left\lbrace<br>\begin{aligned}<br>&amp;u=xy &amp;(0\leqslant u\leqslant 1)\\<br>&amp;v=x &amp;(u\leqslant x\leqslant 1)<br>\end{aligned}<br>\right.\\<br>left=-\iint u^u\frac{1}{v}\mathop{}\mathrm{d}u\mathop{}\mathrm{d}v=-\int_{0}^{1}\mathop{}\mathrm{d}u\int_{u}^{1}u^u\frac{1}{v}=-\int_{0}^{1}u^u\ln u\mathop{}\mathrm{d}u\\<br>\frac{\mathop{}\mathrm{d}{y^y}}{\mathop{}\mathrm{d}{y}}=y^y(\ln y+1)\\<br>0=\int_{0}^{1}\mathop{}\mathrm{d}(y^y)=\int_{0}^{1}y^y\mathop{}\mathrm{d}y+\int_{0}^{1}y^y\ln y\mathop{}\mathrm{d}y\\<br>\therefore -\int_{0}^{1}u^u\ln u\mathop{}\mathrm{d}u=\int_{0}^{1}u^u\mathop{}\mathrm{d}u\\<br>\therefore \iint_{I^2}(xy)^{xy}\mathop{}\mathrm{d}x\mathop{}\mathrm{d}y=\int_{0}^{1}t^t\mathop{}\mathrm{d}t<br>$$</p>]]></content>
     
@@ -59,25 +140,23 @@
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="https://github.com/AutumnCrane/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
     
     
-      <category term="exercise" scheme="https://github.com/AutumnCrane/tags/exercise/"/>
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
     
-      <category term="multivariable analysis" scheme="https://github.com/AutumnCrane/tags/multivariable-analysis/"/>
-    
-      <category term="differential" scheme="https://github.com/AutumnCrane/tags/differential/"/>
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>IYPT</title>
-    <link href="https://github.com/AutumnCrane/2018/04/18/IYPT/"/>
-    <id>https://github.com/AutumnCrane/2018/04/18/IYPT/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/18/IYPT/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/18/IYPT/</id>
     <published>2018-04-18T14:50:43.000Z</published>
-    <updated>2018-04-23T12:10:48.766Z</updated>
+    <updated>2018-06-28T13:22:22.548Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="04-10"><a href="#04-10" class="headerlink" title="04-10"></a>04-10</h1><p>选定特斯拉阀，下载CAD模型，寻找CAD软件，仿真软件。ADINA,失败。</p><h1 id="04-11"><a href="#04-11" class="headerlink" title="04-11"></a>04-11</h1><p>找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0，salome)，运行salome script失败,联系作者。</p><h1 id="04-12"><a href="#04-12" class="headerlink" title="04-12"></a>04-12</h1><p>第一次打印，太粗糙，漏水。找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0)，运行失败。更换至相应版本(5.x)。</p><h1 id="04-13"><a href="#04-13" class="headerlink" title="04-13"></a>04-13</h1><p>继续探索该例程，安装相应版本软件，例程运行成功。作者表示了解了情况，六月份前处理,此时我已解决该问题。第二次打印，加上圆柱接口，但打印出问题，模型翘边，一侧圆柱变扁。另外发现例程不能分析自己的文件，因为自己的stl没有设置bo;undary。</p><h1 id="04-14"><a href="#04-14" class="headerlink" title="04-14"></a>04-14</h1><p>安装fluent，但是虚拟机带不动……</p><h1 id="04-15"><a href="#04-15" class="headerlink" title="04-15"></a>04-15</h1><p>尝试用fluent设置boundary失败</p><h1 id="04-16"><a href="#04-16" class="headerlink" title="04-16"></a>04-16</h1><p>安装pointwise失败。第三次打印，两边翘起。</p><h1 id="04-17"><a href="#04-17" class="headerlink" title="04-17"></a>04-17</h1><p>尝试用salome导出各个group再合并，生成的boundary多出8个face，例程运行失败。安装pointwise成功，但只能导出网格，而不是设置好boundary的stl。第四次打印，调试打印机失败，从打印变形到打不出来……</p><h1 id="04-18"><a href="#04-18" class="headerlink" title="04-18"></a>04-18</h1><p>转向simflow。按教程操作，使用教程文件成功，使用自己文件失败。第五次打印，终于正常打印成功。</p><h1 id="04-19"><a href="#04-19" class="headerlink" title="04-19"></a>04-19</h1><p>打印机又出故障，喷嘴被糊。经过调整修好。安装ANSYS,似乎安装成功。测水流速差异，效果不明显。制作挡风板，用乒乓球测风速。使用吹风机风力太小，使用打气筒风力不恒定。快结束时得知可以用气垫导轨的气泵，测试风力足够，但需要一个转接口。</p><h1 id="04-23"><a href="#04-23" class="headerlink" title="04-23"></a>04-23</h1><p>今天运行openfoam成功，仿真模拟有希望了，希望以后不要出问题。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="04-10"><a href="#04-10" class="headerlink" title="04-10"></a>04-10</h1><p>选定特斯拉阀，下载CAD模型，寻找CAD软件，仿真软件。ADINA,失败。</p><h1 id="04-11"><a href="#04-11" class="headerlink" title="04-11"></a>04-11</h1><p>找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0，salome)，运行salome script失败,联系作者。</p><h1 id="04-12"><a href="#04-12" class="headerlink" title="04-12"></a>04-12</h1><p>第一次打印，太粗糙，漏水。找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0)，运行失败。更换至相应版本(5.x)。</p><h1 id="04-13"><a href="#04-13" class="headerlink" title="04-13"></a>04-13</h1><p>继续探索该例程，安装相应版本软件，例程运行成功。作者表示了解了情况，六月份前处理,此时我已解决该问题。第二次打印，加上圆柱接口，但打印出问题，模型翘边，一侧圆柱变扁。另外发现例程不能分析自己的文件，因为自己的stl没有设置bo;undary。</p><h1 id="04-14"><a href="#04-14" class="headerlink" title="04-14"></a>04-14</h1><p>安装fluent，但是虚拟机带不动……</p><h1 id="04-15"><a href="#04-15" class="headerlink" title="04-15"></a>04-15</h1><p>尝试用fluent设置boundary失败</p><h1 id="04-16"><a href="#04-16" class="headerlink" title="04-16"></a>04-16</h1><p>安装pointwise失败。第三次打印，两边翘起。</p><h1 id="04-17"><a href="#04-17" class="headerlink" title="04-17"></a>04-17</h1><p>尝试用salome导出各个group再合并，生成的boundary多出8个face，例程运行失败。安装pointwise成功，但只能导出网格，而不是设置好boundary的stl。第四次打印，调试打印机失败，从打印变形到打不出来……</p><h1 id="04-18"><a href="#04-18" class="headerlink" title="04-18"></a>04-18</h1><p>转向simflow。按教程操作，使用教程文件成功，使用自己文件失败。第五次打印，终于正常打印成功。</p><h1 id="04-19"><a href="#04-19" class="headerlink" title="04-19"></a>04-19</h1><p>打印机又出故障，喷嘴被糊。经过调整修好。安装ANSYS,似乎安装成功。测水流速差异，效果不明显。制作挡风板，用乒乓球测风速。使用吹风机风力太小，使用打气筒风力不恒定。快结束时得知可以用气垫导轨的气泵，测试风力足够，但需要一个转接口。</p><h1 id="04-23"><a href="#04-23" class="headerlink" title="04-23"></a>04-23</h1><p>今天运行openfoam成功，仿真模拟有希望了，希望以后不要出问题。</p><h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>OpenFOAM还是有问题。最终将就着用案例自带模型。另外打印机出故障的原因是没有使用机器自带的切片软件。最后我们测了特斯拉阀对水、空气、沙子的影响，结果不理想，只能勉强写结题报告。</p><p>结题报告 <a href="http://rec.ustc.edu.cn/s/jdqoez" target="_blank" rel="noopener">http://rec.ustc.edu.cn/s/jdqoez</a>    提取密码:vjijve</p>]]></content>
     
     <summary type="html">
     
@@ -89,17 +168,17 @@
     
     </summary>
     
-      <category term="IYPT" scheme="https://github.com/AutumnCrane/categories/IYPT/"/>
+      <category term="IYPT" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/IYPT/"/>
     
     
-      <category term="tesla valve" scheme="https://github.com/AutumnCrane/tags/tesla-valve/"/>
+      <category term="tesla valve" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla-valve/"/>
     
   </entry>
   
   <entry>
     <title>Supplementary task 9</title>
-    <link href="https://github.com/AutumnCrane/2018/04/08/Supplementary-task-9/"/>
-    <id>https://github.com/AutumnCrane/2018/04/08/Supplementary-task-9/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/08/Supplementary-task-9/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/08/Supplementary-task-9/</id>
     <published>2018-04-08T07:32:06.000Z</published>
     <updated>2018-04-08T09:56:55.580Z</updated>
     
@@ -114,21 +193,21 @@
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="https://github.com/AutumnCrane/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
     
     
-      <category term="exercise" scheme="https://github.com/AutumnCrane/tags/exercise/"/>
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
     
-      <category term="multivariable analysis" scheme="https://github.com/AutumnCrane/tags/multivariable-analysis/"/>
+      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
     
-      <category term="differential" scheme="https://github.com/AutumnCrane/tags/differential/"/>
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>苏轼词十首</title>
-    <link href="https://github.com/AutumnCrane/2018/04/06/%E8%8B%8F%E8%BD%BC%E8%AF%8D%E5%8D%81%E9%A6%96/"/>
-    <id>https://github.com/AutumnCrane/2018/04/06/苏轼词十首/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/%E8%8B%8F%E8%BD%BC%E8%AF%8D%E5%8D%81%E9%A6%96/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/苏轼词十首/</id>
     <published>2018-04-06T13:25:00.000Z</published>
     <updated>2018-04-07T11:50:50.722Z</updated>
     
@@ -144,19 +223,19 @@
     
     </summary>
     
-      <category term="collection" scheme="https://github.com/AutumnCrane/categories/collection/"/>
+      <category term="collection" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/collection/"/>
     
     
-      <category term="Su Shi" scheme="https://github.com/AutumnCrane/tags/Su-Shi/"/>
+      <category term="Su Shi" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Su-Shi/"/>
     
-      <category term="ci" scheme="https://github.com/AutumnCrane/tags/ci/"/>
+      <category term="ci" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/ci/"/>
     
   </entry>
   
   <entry>
     <title>A tour to Nanjing</title>
-    <link href="https://github.com/AutumnCrane/2018/04/06/A-tour-to-Nanjing/"/>
-    <id>https://github.com/AutumnCrane/2018/04/06/A-tour-to-Nanjing/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/A-tour-to-Nanjing/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/A-tour-to-Nanjing/</id>
     <published>2018-04-06T13:22:18.000Z</published>
     <updated>2018-04-07T15:27:52.977Z</updated>
     
@@ -172,17 +251,17 @@
     
     </summary>
     
-      <category term="tour" scheme="https://github.com/AutumnCrane/categories/tour/"/>
+      <category term="tour" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/tour/"/>
     
     
-      <category term="Nan jing" scheme="https://github.com/AutumnCrane/tags/Nan-jing/"/>
+      <category term="Nan jing" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Nan-jing/"/>
     
   </entry>
   
   <entry>
     <title>Align underline in LaTeX</title>
-    <link href="https://github.com/AutumnCrane/2018/03/31/underline/"/>
-    <id>https://github.com/AutumnCrane/2018/03/31/underline/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/03/31/underline/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/03/31/underline/</id>
     <published>2018-03-31T14:12:44.000Z</published>
     <updated>2018-04-04T04:31:53.850Z</updated>
     
@@ -197,10 +276,10 @@
     
     </summary>
     
-      <category term="LaTex" scheme="https://github.com/AutumnCrane/categories/LaTex/"/>
+      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/LaTex/"/>
     
     
-      <category term="LaTex" scheme="https://github.com/AutumnCrane/tags/LaTex/"/>
+      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/LaTex/"/>
     
   </entry>
   
