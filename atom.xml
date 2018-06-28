@@ -3,11 +3,11 @@
   <title>Gong Siqiu</title>
   
   <subtitle>USTC</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/~gongsiqiu/public/atom.xml" rel="self"/>
   
-  <link href="https://github.com/AutumnCrane/"/>
+  <link href="http://home.ustc.edu.cn/~gongsiqiu/public/"/>
   <updated>2018-05-20T12:22:06.056Z</updated>
-  <id>https://github.com/AutumnCrane/</id>
+  <id>http://home.ustc.edu.cn/~gongsiqiu/public/</id>
   
   <author>
     <name>Gong Siqiu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>梯度，散度，旋度</title>
-    <link href="https://github.com/AutumnCrane/2018/05/20/%E6%A2%AF%E5%BA%A6%EF%BC%8C%E6%95%A3%E5%BA%A6%EF%BC%8C%E6%97%8B%E5%BA%A6/"/>
-    <id>https://github.com/AutumnCrane/2018/05/20/梯度，散度，旋度/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/20/%E6%A2%AF%E5%BA%A6%EF%BC%8C%E6%95%A3%E5%BA%A6%EF%BC%8C%E6%97%8B%E5%BA%A6/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/20/梯度，散度，旋度/</id>
     <published>2018-05-20T12:16:41.000Z</published>
     <updated>2018-05-20T12:22:06.056Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="https://github.com/AutumnCrane/../blog/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
     
     
-      <category term="multivariable analysis" scheme="https://github.com/AutumnCrane/../blog/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
     
-      <category term="exercise" scheme="https://github.com/AutumnCrane/../blog/tags/exercise/"/>
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>OpenFoam 模型的注释</title>
-    <link href="https://github.com/AutumnCrane/2018/05/01/OpenFoam-%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%B3%A8%E9%87%8A/"/>
-    <id>https://github.com/AutumnCrane/2018/05/01/OpenFoam-模型的注释/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/01/OpenFoam-%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%B3%A8%E9%87%8A/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/05/01/OpenFoam-模型的注释/</id>
     <published>2018-05-01T10:21:02.000Z</published>
     <updated>2018-05-01T10:49:53.672Z</updated>
     
@@ -61,17 +61,17 @@
     
     </summary>
     
-      <category term="CFD" scheme="https://github.com/AutumnCrane/../blog/categories/CFD/"/>
+      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
     
     
-      <category term="OpenFoam" scheme="https://github.com/AutumnCrane/../blog/tags/OpenFoam/"/>
+      <category term="OpenFoam" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/OpenFoam/"/>
     
   </entry>
   
   <entry>
     <title>Analysis quiz</title>
-    <link href="https://github.com/AutumnCrane/2018/04/28/Analysis-quiz/"/>
-    <id>https://github.com/AutumnCrane/2018/04/28/Analysis-quiz/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/28/Analysis-quiz/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/28/Analysis-quiz/</id>
     <published>2018-04-28T14:37:02.000Z</published>
     <updated>2018-04-29T02:53:29.955Z</updated>
     
@@ -86,21 +86,21 @@
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="https://github.com/AutumnCrane/../blog/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
     
     
-      <category term="quiz" scheme="https://github.com/AutumnCrane/../blog/tags/quiz/"/>
+      <category term="quiz" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/quiz/"/>
     
-      <category term="multivariable analysis" scheme="https://github.com/AutumnCrane/../blog/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
     
-      <category term="differential" scheme="https://github.com/AutumnCrane/../blog/tags/differential/"/>
+      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
     
   </entry>
   
   <entry>
     <title>Note on Tobias Holzmann&#39;s Tesla&#39;s One-Way-Valve tutorial</title>
-    <link href="https://github.com/AutumnCrane/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/"/>
-    <id>https://github.com/AutumnCrane/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/23/Note-on-Tobias-Holzmann-s-Tesla-s-One-Way-Valve-tutorial/</id>
     <published>2018-04-23T11:16:56.000Z</published>
     <updated>2018-06-28T13:36:10.577Z</updated>
     
@@ -115,17 +115,17 @@
     
     </summary>
     
-      <category term="CFD" scheme="https://github.com/AutumnCrane/../blog/categories/CFD/"/>
+      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
     
     
-      <category term="tesla" scheme="https://github.com/AutumnCrane/../blog/tags/tesla/"/>
+      <category term="tesla" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla/"/>
     
   </entry>
   
   <entry>
     <title>n重积分</title>
-    <link href="https://github.com/AutumnCrane/2018/04/21/n%E9%87%8D%E7%A7%AF%E5%88%86/"/>
-    <id>https://github.com/AutumnCrane/2018/04/21/n重积分/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/21/n%E9%87%8D%E7%A7%AF%E5%88%86/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/21/n重积分/</id>
     <published>2018-04-21T12:12:29.000Z</published>
     <updated>2018-05-20T12:18:28.741Z</updated>
     
@@ -140,19 +140,19 @@
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="https://github.com/AutumnCrane/../blog/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
     
     
-      <category term="multivariable analysis" scheme="https://github.com/AutumnCrane/../blog/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
     
-      <category term="exercise" scheme="https://github.com/AutumnCrane/../blog/tags/exercise/"/>
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>IYPT</title>
-    <link href="https://github.com/AutumnCrane/2018/04/18/IYPT/"/>
-    <id>https://github.com/AutumnCrane/2018/04/18/IYPT/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/18/IYPT/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/18/IYPT/</id>
     <published>2018-04-18T14:50:43.000Z</published>
     <updated>2018-06-28T13:22:22.548Z</updated>
     
@@ -168,17 +168,17 @@
     
     </summary>
     
-      <category term="IYPT" scheme="https://github.com/AutumnCrane/../blog/categories/IYPT/"/>
+      <category term="IYPT" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/IYPT/"/>
     
     
-      <category term="tesla valve" scheme="https://github.com/AutumnCrane/../blog/tags/tesla-valve/"/>
+      <category term="tesla valve" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla-valve/"/>
     
   </entry>
   
   <entry>
     <title>Supplementary task 9</title>
-    <link href="https://github.com/AutumnCrane/2018/04/08/Supplementary-task-9/"/>
-    <id>https://github.com/AutumnCrane/2018/04/08/Supplementary-task-9/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/08/Supplementary-task-9/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/08/Supplementary-task-9/</id>
     <published>2018-04-08T07:32:06.000Z</published>
     <updated>2018-04-08T09:56:55.580Z</updated>
     
@@ -193,21 +193,21 @@
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="https://github.com/AutumnCrane/../blog/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
     
     
-      <category term="multivariable analysis" scheme="https://github.com/AutumnCrane/../blog/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
     
-      <category term="differential" scheme="https://github.com/AutumnCrane/../blog/tags/differential/"/>
+      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
     
-      <category term="exercise" scheme="https://github.com/AutumnCrane/../blog/tags/exercise/"/>
+      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>苏轼词十首</title>
-    <link href="https://github.com/AutumnCrane/2018/04/06/%E8%8B%8F%E8%BD%BC%E8%AF%8D%E5%8D%81%E9%A6%96/"/>
-    <id>https://github.com/AutumnCrane/2018/04/06/苏轼词十首/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/%E8%8B%8F%E8%BD%BC%E8%AF%8D%E5%8D%81%E9%A6%96/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/苏轼词十首/</id>
     <published>2018-04-06T13:25:00.000Z</published>
     <updated>2018-04-07T11:50:50.722Z</updated>
     
@@ -223,19 +223,19 @@
     
     </summary>
     
-      <category term="collection" scheme="https://github.com/AutumnCrane/../blog/categories/collection/"/>
+      <category term="collection" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/collection/"/>
     
     
-      <category term="Su Shi" scheme="https://github.com/AutumnCrane/../blog/tags/Su-Shi/"/>
+      <category term="Su Shi" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Su-Shi/"/>
     
-      <category term="ci" scheme="https://github.com/AutumnCrane/../blog/tags/ci/"/>
+      <category term="ci" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/ci/"/>
     
   </entry>
   
   <entry>
     <title>A tour to Nanjing</title>
-    <link href="https://github.com/AutumnCrane/2018/04/06/A-tour-to-Nanjing/"/>
-    <id>https://github.com/AutumnCrane/2018/04/06/A-tour-to-Nanjing/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/A-tour-to-Nanjing/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/04/06/A-tour-to-Nanjing/</id>
     <published>2018-04-06T13:22:18.000Z</published>
     <updated>2018-04-07T15:27:52.977Z</updated>
     
@@ -251,17 +251,17 @@
     
     </summary>
     
-      <category term="tour" scheme="https://github.com/AutumnCrane/../blog/categories/tour/"/>
+      <category term="tour" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/tour/"/>
     
     
-      <category term="Nan jing" scheme="https://github.com/AutumnCrane/../blog/tags/Nan-jing/"/>
+      <category term="Nan jing" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Nan-jing/"/>
     
   </entry>
   
   <entry>
     <title>Align underline in LaTeX</title>
-    <link href="https://github.com/AutumnCrane/2018/03/31/underline/"/>
-    <id>https://github.com/AutumnCrane/2018/03/31/underline/</id>
+    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2018/03/31/underline/"/>
+    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2018/03/31/underline/</id>
     <published>2018-03-31T14:12:44.000Z</published>
     <updated>2018-04-04T04:31:53.850Z</updated>
     
@@ -276,10 +276,10 @@
     
     </summary>
     
-      <category term="LaTex" scheme="https://github.com/AutumnCrane/../blog/categories/LaTex/"/>
+      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/LaTex/"/>
     
     
-      <category term="LaTex" scheme="https://github.com/AutumnCrane/../blog/tags/LaTex/"/>
+      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/LaTex/"/>
     
   </entry>
   
