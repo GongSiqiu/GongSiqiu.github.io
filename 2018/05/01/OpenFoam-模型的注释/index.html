@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -53,19 +62,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
@@ -80,7 +89,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.1.0',
+    version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
@@ -196,9 +205,7 @@
 
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> 
-
-<div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -209,13 +216,15 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">USTC</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="accessibility.nav_toggle">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -223,65 +232,61 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
         
+        
           
-  <li class="menu-item menu-item-home">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
-</li>
-
-      
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
         
-        
-          
-  <li class="menu-item menu-item-about">
-    <a href="http://home.ustc.edu.cn/~gongsiqiu/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />about</a>
-</li>
-
-      
         
         
           
-  <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-about">
+    <a href="http:/home.ustc.edu.cn/~gongsiqiu/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
-</li>
-
-      
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />categories</a>
-</li>
-
-      
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-archives">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
-</li>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
 
       
-
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />menu.search</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
         </li>
       
     </ul>
@@ -302,7 +307,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="search.placeholder" spellcheck="false"
+             placeholder="Searching..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -316,11 +321,12 @@
 </nav>
 
 
+
   
 
 
 
- </div>
+</div>
     </header>
 
     
@@ -380,40 +386,50 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">OpenFoam 模型的注释</h2>
+          <h2 class="post-title" itemprop="name headline">OpenFoam 模型的注释
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-05-01T18:21:02+08:00">2018-05-01</time>
-            
 
-            
-            
               
                 
               
+
+              <time title="Created: 2018-05-01 18:21:02" itemprop="dateCreated datePublished" datetime="2018-05-01T18:21:02+08:00">2018-05-01</time>
             
 
             
               
-              <span class="post-meta-divider">|</span>
-              
 
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">post.modifiedsymbol.colon</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-29 19:50:06" itemprop="dateModified" datetime="2018-06-29T19:50:06+08:00">2018-06-29</time>
               
-              <time title="post.modified" itemprop="dateModified" datetime="2018-06-29T19:50:06+08:00">2018-06-29</time>
             
           </span>
 
@@ -426,7 +442,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/../blog/categories/CFD/" itemprop="url" rel="index"><span itemprop="name">CFD</span></a></span>
@@ -445,6 +461,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/05/01/OpenFoam-模型的注释/#comments" itemprop="discussionUrl">
+                
                   <span class="post-comments-count disqus-comment-count"
                         data-disqus-identifier="2018/05/01/OpenFoam-模型的注释/" itemprop="commentCount"></span>
                 </a>
@@ -494,13 +511,13 @@
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>post.copyright.authorsymbol.colon </strong>Gong Siqiu</li>
+    <strong>Post author:  </strong>Gong Siqiu</li>
   <li class="post-copyright-link">
-    <strong>post.copyright.linksymbol.colon</strong>
+    <strong>Post link: </strong>
     <a href="https://github.com/GongSiqiu/2018/05/01/OpenFoam-模型的注释/" title="OpenFoam 模型的注释">https://github.com/GongSiqiu/2018/05/01/OpenFoam-模型的注释/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>post.copyright.license_titlesymbol.colon </strong>post.copyright.license_content</li>
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
 </ul>
 
       </div>
@@ -611,10 +628,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            sidebar.toc
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            sidebar.overview
+            Overview
           </li>
         </ul>
       
@@ -639,7 +656,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">state.posts</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -666,7 +683,7 @@
                       
                     
                     <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">state.categories</span>
+                    <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
               
@@ -703,7 +720,7 @@
                       
                     
                     <span class="site-state-item-count">12</span>
-                    <span class="site-state-item-name">state.tags</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -786,7 +803,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love" id="animate"> 
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Gong Siqiu</span>
@@ -801,7 +818,7 @@
 
 
 
-  <div class="powered-by">footer.powered</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 
@@ -809,7 +826,7 @@
 
 
 
-  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.1.0</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.3.0</div>
 
 
 
@@ -890,32 +907,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
@@ -931,7 +948,7 @@
         this.page.url = 'https://github.com/GongSiqiu/2018/05/01/OpenFoam-模型的注释/';
         this.page.identifier = '2018/05/01/OpenFoam-模型的注释/';
         this.page.title = 'OpenFoam 模型的注释';
-      };
+        };
       function loadComments () {
         var d = document, s = d.createElement('script');
         s.src = 'https://gsqustc.disqus.com/embed.js';
@@ -957,12 +974,6 @@
       
     </script>
   
-
-
-
-
-
-	
 
 
 
@@ -1373,7 +1384,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.scrollToMark('auto', "#post.more");
+    bookmark.scrollToMark('auto', "#more");
   
   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
@@ -1394,6 +1405,8 @@
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
 
+
+  
 
 </body>
 </html>
