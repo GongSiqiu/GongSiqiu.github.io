@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="The blog of Gong Siqiu. It is mainly used to record some interesting questions during my study in USTC and some experiences.">
-<meta name="keywords" content="Gong Siqiu, study, questions">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://gongsiqiu.github.io/categories/index.html">
+  <meta name="description" content="incompressible 不可压缩流体pimpleFoamLES大涡模拟是对紊流脉动（或紊流涡）的一种空间平均，也就是通过某种滤波函数将大尺度的涡和小尺度的涡分离开，大尺度的涡直接模拟，小尺度的涡用模型来封闭。大涡模拟成立的理论基础是在高雷诺数紊流中存在惯性子尺度的涡，该尺度的涡具有统计意义上的各项同性的性质，理论上它既不含能量也不耗散能量，它将含能尺度的涡的能量传递给耗散尺度的涡 lamin">
+<meta name="keywords" content="OpenFoam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenFoam 模型的注释">
+<meta property="og:url" content="https://gongsiqiu.github.io/3130324815/index.html">
 <meta property="og:site_name" content="Gong Siqiu">
-<meta property="og:description" content="The blog of Gong Siqiu. It is mainly used to record some interesting questions during my study in USTC and some experiences.">
+<meta property="og:description" content="incompressible 不可压缩流体pimpleFoamLES大涡模拟是对紊流脉动（或紊流涡）的一种空间平均，也就是通过某种滤波函数将大尺度的涡和小尺度的涡分离开，大尺度的涡直接模拟，小尺度的涡用模型来封闭。大涡模拟成立的理论基础是在高雷诺数紊流中存在惯性子尺度的涡，该尺度的涡具有统计意义上的各项同性的性质，理论上它既不含能量也不耗散能量，它将含能尺度的涡的能量传递给耗散尺度的涡 lamin">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-06T13:04:48.148Z">
+<meta property="og:updated_time" content="2018-06-29T11:50:06.761Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="The blog of Gong Siqiu. It is mainly used to record some interesting questions during my study in USTC and some experiences.">
+<meta name="twitter:title" content="OpenFoam 模型的注释">
+<meta name="twitter:description" content="incompressible 不可压缩流体pimpleFoamLES大涡模拟是对紊流脉动（或紊流涡）的一种空间平均，也就是通过某种滤波函数将大尺度的涡和小尺度的涡分离开，大尺度的涡直接模拟，小尺度的涡用模型来封闭。大涡模拟成立的理论基础是在高雷诺数紊流中存在惯性子尺度的涡，该尺度的涡具有统计意义上的各项同性的性质，理论上它既不含能量也不耗散能量，它将含能尺度的涡的能量传递给耗散尺度的涡 lamin">
 
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="https://gongsiqiu.github.io/categories/"/>
+  <link rel="canonical" href="https://gongsiqiu.github.io/3130324815/"/>
 
 
 
@@ -142,7 +142,7 @@
   };
 </script>
 
-  <title>categories | Gong Siqiu</title>
+  <title>OpenFoam 模型的注释 | Gong Siqiu</title>
   
 
 
@@ -266,7 +266,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
   </li>
@@ -349,113 +349,263 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://gongsiqiu.github.io/3130324815/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gong Siqiu">
+      <meta itemprop="description" content="The blog of Gong Siqiu. It is mainly used to record some interesting questions during my study in USTC and some experiences.">
+      <meta itemprop="image" content="/images/avator.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gong Siqiu">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">categories</h2>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                7 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CFD/">CFD</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/IYPT/">IYPT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LaTex/">LaTex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematical-analysis/">Mathematical analysis</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thermology/">Thermology</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/collection/">collection</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tour/">tour</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h2 class="post-title" itemprop="name headline">OpenFoam 模型的注释
+              
+            
+          </h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-01 18:21:02" itemprop="dateCreated datePublished" datetime="2018-05-01T18:21:02+08:00">2018-05-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-29 19:50:06" itemprop="dateModified" datetime="2018-06-29T19:50:06+08:00">2018-06-29</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CFD/" itemprop="url" rel="index"><span itemprop="name">CFD</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/3130324815/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="3130324815/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="incompressible-不可压缩流体"><a href="#incompressible-不可压缩流体" class="headerlink" title="incompressible 不可压缩流体"></a>incompressible 不可压缩流体</h1><h2 id="pimpleFoam"><a href="#pimpleFoam" class="headerlink" title="pimpleFoam"></a>pimpleFoam</h2><h2 id="LES"><a href="#LES" class="headerlink" title="LES"></a>LES</h2><p>大涡模拟是对紊流脉动（或紊流涡）的一种空间平均，也就是通过某种滤波函数将大尺度的涡和小尺度的涡分离开，大尺度的涡直接模拟，小尺度的涡用模型来封闭。大涡模拟成立的理论基础是在高雷诺数紊流中存在惯性子尺度的涡，该尺度的涡具有统计意义上的各项同性的性质，理论上它既不含能量也不耗散能量，它将含能尺度的涡的能量传递给耗散尺度的涡</p>
+<h2 id="laminar"><a href="#laminar" class="headerlink" title="laminar"></a>laminar</h2><p>层流（laminar flow）是流体的一种流动状态，它作层状的流动。流体在管内低速流动时呈现为层流，其质点沿着与管轴平行的方向作平滑直线运动。流体的流速在管中心处最大，其近壁处最小。管内流体的平均流速与最大流速之比等于0.5。</p>
+
       
     </div>
+
     
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Gong Siqiu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://gongsiqiu.github.io/3130324815/" title="OpenFoam 模型的注释">https://gongsiqiu.github.io/3130324815/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenFoam/" rel="tag"># OpenFoam</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/1566409618/" rel="next" title="Analysis quiz">
+                <i class="fa fa-chevron-left"></i> Analysis quiz
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/68592814/" rel="prev" title="梯度，散度，旋度">
+                梯度，散度，旋度 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-    
-    
-    
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -476,8 +626,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -613,6 +772,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#incompressible-不可压缩流体"><span class="nav-number">1.</span> <span class="nav-text">incompressible 不可压缩流体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pimpleFoam"><span class="nav-number">1.1.</span> <span class="nav-text">pimpleFoam</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LES"><span class="nav-number">1.2.</span> <span class="nav-text">LES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#laminar"><span class="nav-number">1.3.</span> <span class="nav-text">laminar</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -767,6 +942,37 @@
     <script id="dsq-count-scr" src="https://gsqustc.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://gongsiqiu.github.io/3130324815/';
+        this.page.identifier = '3130324815/';
+        this.page.title = 'OpenFoam 模型的注释';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://gsqustc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        $(function () {
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          if (offsetTop <= 0) {
+            // load directly when there's no a scrollbar
+            loadComments();
+          } else {
+            $(window).on('scroll.disqus_scroll', function () {
+              var scrollTop = document.documentElement.scrollTop;
+              if (scrollTop >= offsetTop) {
+                $(window).off('.disqus_scroll');
+                loadComments();
+              }
+            });
+          }
+        });
+      
+    </script>
   
 
 
@@ -1178,7 +1384,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#more");
   
   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
