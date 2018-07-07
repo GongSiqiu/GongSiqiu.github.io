@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[液体沸腾条件]]></title>
+    <url>%2F2018%2F07%2F06%2F%E6%B6%B2%E4%BD%93%E6%B2%B8%E8%85%BE%E6%9D%A1%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[$$(p_{v_0}+p_g)-p=\Delta p$$ $$p_g=\frac{\nu RT}{V}, \Delta p=\frac{2 \alpha}{r}$$ $$r=\left( \frac{3}{4 \pi}V \right)^\frac{1}{3}$$ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$ 最终化为$$p+\frac{A}{V^\frac{1}{3}}=p_0+\frac{B}{V}$$即$$p+\frac{A}{V^\frac{1}{3}}-\frac{B}{V}=p_0$$现考虑$$f(V)=\frac{A}{V^\frac{1}{3}}-\frac{B}{V}$$$$f'(V)=\frac{B}{{{V}^{2}}}-\frac{A}{3 {{V}^{\frac{4}{3}}}}=\frac{3 B-A {{V}^{\frac{2}{3}}}}{3 {{V}^{2}}}$$$f(V)$在$(0,(\frac{3B}{A})^\frac{3}{2})$单增，$((\frac{3B}{A})^\frac{3}{2}，+\infty)$单减。$f(V)_{max}=\frac{2 {{A}^{\frac{3}{2}}}}{{{3}^{\frac{3}{2}}} \sqrt{B}}$ 所以力学平衡只能维持到$V=(\frac{3B}{A})^\frac{3}{2}$。也就是说并非饱和蒸气压等于外界压强时液体就沸腾。但是我们现在考虑一下沸腾时二者之差的最大值，即$f(V)_{max}=\frac{2 {{A}^{\frac{3}{2}}}}{{{3}^{\frac{3}{2}}} \sqrt{B}}$ $$\alpha \sim 10^{-2}N/m,\therefore A\sim 10^{-2}N/m$$ 取气泡体积为$1mm^3$$$B\approx\frac{1\times 10^{-9}}{22.4\times 10^{-3}} \times 8.3\times 300\approx 1\times 10^{-4}(J)$$$$\therefore f(V)_{max}\approx 1\times 10^{-1}{Pa}\ll p$$ 所以说饱和蒸气压等于外界压强时液体沸腾是合理的。不过有人从另一方面质疑液体沸腾条件，见王聪生, 靖智慧. 质疑液体沸腾条件[J]. 物理教师, 2006, 27(12):10-11.]]></content>
+      <categories>
+        <category>Thermology</category>
+      </categories>
+      <tags>
+        <tag>liquid</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[梯度，散度，旋度]]></title>
     <url>%2F2018%2F05%2F20%2F%E6%A2%AF%E5%BA%A6%EF%BC%8C%E6%95%A3%E5%BA%A6%EF%BC%8C%E6%97%8B%E5%BA%A6%2F</url>
     <content type="text"><![CDATA[设$\vec{v},\vec{\omega}$散度和旋度均相等，问：在什么条件下，$\vec{v}=\vec{\omega}$问题等价于当$$\nabla\times\vec{v}=0,\nabla\cdot\vec{v}=0$$什么条件下$\vec{v}=0$?设$\Omega\subset\mathbb{R}^3$区域。$\partial \Omega$为光滑曲面。$\vec{v}$是$\overline{\Omega}$上的向量场$$\nabla\times\vec{v}=0,\nabla\cdot\vec{v}=0$$设$\vec{v}=P\vec{i}+Q\vec{j}+R\vec{k}$ $$\nabla\times\vec{v}=0\Rightarrow\left\lbrace\begin{aligned}\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}=0\\\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}=0\\\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=0\end{aligned}\right.$$$$\nabla\cdot\vec{v}=0\Rightarrow\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}=0$$$$\frac{\partial \nabla\cdot\vec{v}}{\partial x}=\Delta P=0$$$$\Delta P=\Delta Q=\Delta R=0$$命题：设$f,\overline{\Omega}\rightarrow\mathbb{R}$光滑函数$\Delta f=0$且$f|_{\partial\Omega}\equiv 0\rightarrow f\equiv 0$ 证明$$\nabla\cdot(f\nabla f)=\nabla f\cdot\nabla f+f\nabla\cdot\nabla f=|\nabla f|^2+f\nabla f=|\nabla f|^2$$积分$$\int_\Omega|\nabla f|^2\mathop{}\mathrm{d}V=\int_\Omega\nabla \cdot(f\nabla f)\mathop{}\mathrm{d}V=\int_{\partial\Omega}(f\nabla f)\mathop{}\mathrm{d}\vec{S}=0\rightarrow|\nabla f|\equiv 0$$所以$f$是常值函数]]></content>
