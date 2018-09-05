@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2018-07-07T09:57:36.771Z</updated>
+  <updated>2018-09-04T13:27:41.669Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bell State and GHZ State</title>
+    <link href="/130017201/"/>
+    <id>/130017201/</id>
+    <published>2018-09-04T11:45:15.000Z</published>
+    <updated>2018-09-04T13:27:41.669Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="What-is-Bell-states"><a href="#What-is-Bell-states" class="headerlink" title="What is Bell states?"></a>What is <a href="https://en.wikipedia.org/wiki/Bell_state" target="_blank" rel="noopener">Bell states</a>?</h1><p>The Bell states are four specific maximally entangled quantum states of two qubits.<br>\begin{equation}<br>\begin{aligned}<br>\vert \Psi^\pm \rangle = \frac{1}{\sqrt{2}}(\vert 0\rangle\vert 1\rangle\pm\vert 1\rangle\vert 0\rangle)\\<br>\vert \Phi^\pm \rangle = \frac{1}{\sqrt{2}}(\vert 0\rangle\vert 0\rangle\pm\vert 1\rangle\vert 1\rangle)<br>\end{aligned}<br>\end{equation}</p><h1 id="How-to-generate-and-measure-Bell-states"><a href="#How-to-generate-and-measure-Bell-states" class="headerlink" title="How to generate and measure Bell states?"></a>How to generate and measure Bell states?</h1><p>It is easy to generate and measure Bell states with Hadamard gate and Controled-Not gate.<br><img src="BellMeasurement.png" alt="The Bell measurement: the gates on the left hand side allow us to generate the four Bell states from the four possible different inputs. Reversing the order of the gates (right-hand side of the diagram) corresponds to a Bell measurement."><br>The Bell measurement: the gates on the left hand side allow us to generate the four Bell states from the four possible different inputs. Reversing the order of the gates (right-hand side of the diagram) corresponds to a Bell measurement.</p><h2 id="Hadamard-gate"><a href="#Hadamard-gate" class="headerlink" title="Hadamard gate"></a>Hadamard gate</h2><p>It is equivalent to the following unitary transformation:<br>\begin{equation}<br>\begin{aligned}<br>\vert 0\rangle \rightarrow \frac{1}{\sqrt{2}}(\vert 0\rangle+\vert 1\rangle)\\<br>\vert 1\rangle \rightarrow \frac{1}{\sqrt{2}}(\vert 0\rangle-\vert 1\rangle)<br>\end{aligned}<br>\end{equation}</p><h2 id="Controled-Not-gate"><a href="#Controled-Not-gate" class="headerlink" title="Controled-Not gate"></a>Controled-Not gate</h2><p>It flips the second of two qubits if and only if the first is $\vert 1\rangle$, namely</p><p>\begin{equation}<br>\begin{aligned}<br>\vert 0\rangle\vert 0\rangle \rightarrow \vert 0\rangle\vert 0\rangle\\<br>\vert 0\rangle\vert 1\rangle \rightarrow \vert 0\rangle\vert 1\rangle\\<br>\vert 1\rangle\vert 0\rangle \rightarrow \vert 1\rangle\vert 1\rangle\\<br>\vert 1\rangle\vert 1\rangle \rightarrow \vert 1\rangle\vert 0\rangle<br>\end{aligned}<br>\end{equation}<br>The first qubit control whether apply ‘NOT’ on the other qubit.</p><h1 id="Greenberger–Horne–Zeilinger-state-GHZ-state"><a href="#Greenberger–Horne–Zeilinger-state-GHZ-state" class="headerlink" title="Greenberger–Horne–Zeilinger state (GHZ state)"></a>Greenberger–Horne–Zeilinger state (<a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state" target="_blank" rel="noopener">GHZ state</a>)</h1><p>Maximally entangled three-particle states, that is,<br>\begin{equation}<br>\begin{aligned}<br> \frac{1}{\sqrt{2}}(\vert a\rangle\vert b\rangle\vert c\rangle\pm\vert \overline{a}\rangle\vert \overline{b}\rangle\vert \overline{c}\rangle)<br>\end{aligned}<br>\end{equation}<br>where a, b and c can each take the values 0 and 1 and \(\overline{a}\) and \(\overline{b}\)and \(\overline{c}\) denote NOT-a and NOT-b<br>I feel confused in this place. Wikipedia says GHZ state is only \(<br>{\displaystyle |\mathrm {GHZ} \rangle ={\frac {|0\rangle ^{\otimes M}+|1\rangle ^{\otimes M}}{\sqrt {2}}}.}<br>\) which is different with this paper “Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan”</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Bell_state" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Bell_state</a></li><li><a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state</a></li><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;What-is-Bell-states&quot;&gt;&lt;a href=&quot;#What-is-Bell-states&quot; class=&quot;headerlink&quot; title=&quot;What is Bell states?&quot;&gt;&lt;/a&gt;What is &lt;a href=&quot;https://en.
+      
+    
+    </summary>
+    
+      <category term="Quantum" scheme="/categories/Quantum/"/>
+    
+    
+      <category term="Basic Theory" scheme="/tags/Basic-Theory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Start of Quantum Communication</title>
+    <link href="/3133353157/"/>
+    <id>/3133353157/</id>
+    <published>2018-08-20T13:02:49.000Z</published>
+    <updated>2018-08-29T08:29:37.862Z</updated>
+    
+    <content type="html"><![CDATA[<p>I decide to write this to record someting important or interesting in my experience about quantum communication.<br>The followings are a list of some papers.</p><ol><li>Quantum Teleportation and Multi-photon Entanglement</li><li>Quantum teleportation of multiple degrees of freedom of a single photon</li><li>Near-Transform-Limited Single Photons from an Efficient Solid-State Quantum Emitter</li><li>Experimental Ten-Photon Entanglement</li><li>An Efficient, High-Quality Single-Photon Source</li><li>On-Demand Single Photons with High Extraction Efficiency and Near-Unity Indistinguishability from a Resonantly Driven Quantum Dot in a Micropillar</li><li>High-efficiency multiphoton boson sampling</li><li>Toward “Quantum Supremacy” with Multiphoton Boson Sampling</li><li>Toward Scalable Boson Sampling with Photon Loss</li><li>18-Qubit Entanglement with Six Photons’ Three Degrees of Freedom</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I decide to write this to record someting important or interesting in my experience about quantum communication.&lt;br&gt;The followings are a 
+      
+    
+    </summary>
+    
+      <category term="Quantum" scheme="/categories/Quantum/"/>
+    
+    
+      <category term="Start" scheme="/tags/Start/"/>
+    
+  </entry>
   
   <entry>
     <title>液体沸腾条件</title>

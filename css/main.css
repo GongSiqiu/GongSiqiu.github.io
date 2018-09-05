@@ -1777,7 +1777,7 @@ pre .javascript .function {
   align-items: center;
 }
 .post-widgets .post-meta-divider {
-  height: 28px;
+  height: 25px;
   color: #999;
 }
 .wp_rating {
@@ -1802,6 +1802,17 @@ pre .javascript .function {
 .fb_like {
   height: 30px;
   align-self: center;
+}
+.bdsharebuttonbox {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.bdsharebuttonbox a {
+  border: none;
+}
+.bdshare-slide-button-box a {
+  border: none;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -1907,16 +1918,6 @@ pre .javascript .function {
   border: 1px solid #eee;
   opacity: 1;
 }
-img:hover {
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  -ms-transform: rotateZ(360deg);
-  -o-transform: rotateZ(360deg);
-  transform: rotateZ(360deg);
-}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1999,7 +2000,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2d5b;
+  background: #de5909;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2274,31 +2275,8 @@ img:hover {
     transform: scale(1.1);
   }
 }
-.post-spread {
-  margin-top: 20px;
-  text-align: center;
-}
-.jiathis_style {
-  display: inline-block;
-}
-.jiathis_style a {
-  border: none;
-}
 .fa {
   font-family: FontAwesome !important;
-}
-.post-spread {
-  margin-top: 20px;
-  text-align: center;
-}
-.bdshare-slide-button-box a {
-  border: none;
-}
-.bdsharebuttonbox {
-  display: inline-block;
-}
-.bdsharebuttonbox a {
-  border: none;
 }
 .local-search-pop-overlay {
   position: fixed;
