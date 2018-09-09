@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2018-09-04T13:27:41.669Z</updated>
+  <updated>2018-09-07T09:10:11.193Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The change of probability</title>
+    <link href="/2238708925/"/>
+    <id>/2238708925/</id>
+    <published>2018-09-07T08:41:12.000Z</published>
+    <updated>2018-09-07T09:10:11.193Z</updated>
+    
+    <content type="html"><![CDATA[<p>Two photons income a 50:50 beam splitter from a and b respectly. <img src="spliter" alt="spliter"> There are four results. <img src="Photons_displaying_the_Hong–Ou–Mandel_effect.png" alt="result">. If the two photons are identical in their physical properties and indistinguishable, we cannot distinguish between the output states of possibilities 2 and 3, and the probability of possibilities 2 and 3 is 50%.<br>If they arrive at the splitter simultaneously, as demonstrated in reference 1<br>\begin{equation}<br>\begin{aligned}<br>\vert \psi_f \rangle&amp;=\frac{1}{2\sqrt{2}}[(\alpha \gamma + \beta \delta)(\vert H\rangle_1 |H\rangle_2 + |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \gamma - \beta \delta)(\vert H\rangle_1 |H\rangle_2 - |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta + \beta \gamma)(\vert H\rangle_1 |V\rangle_2 + |V\rangle_1 |H\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta - \beta \gamma)(\vert H\rangle_1 |V\rangle_2 - |H\rangle_1 |V\rangle_2 )\cdot (|d\rangle_1 |c\rangle_2 - |c\rangle_1 |d\rangle_2)]<br>\end{aligned}<br>\label{phif}<br>\end{equation}<br>the probability of 2 and 3 changes from 50% to \(\frac{1}{8}|\alpha\delta-\beta\gamma|^2\)<br>In section 3.2.2 of reference 1, which explains the concept of quantum teleportation, the probability of 2 and 3 changes to 25%. Because photon 2 and 3 are entangled and by rewriting the state of photon 1,2 and 3 it is easy to find that the probability of \(|\Psi^-\rangle_{12}\) is 25%. And we can find in eq(1)) that \(|\Psi^-\rangle_{12}\)means probability of 2 and 3 happens.</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Two photons income a 50:50 beam splitter from a and b respectly. &lt;img src=&quot;spliter&quot; alt=&quot;spliter&quot;&gt; There are four results. &lt;img src=&quot;Phot
+      
+    
+    </summary>
+    
+      <category term="Quantum" scheme="/categories/Quantum/"/>
+    
+    
+      <category term="summary" scheme="/tags/summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hong–Ou–Mandel effect</title>
+    <link href="/1603040770/"/>
+    <id>/1603040770/</id>
+    <published>2018-09-07T07:41:10.000Z</published>
+    <updated>2018-09-07T08:52:54.237Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Abstract from <a href="https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect" target="_blank" rel="noopener">wikipedia</a></p></blockquote><p>The effect occurs when two identical single-photon waves enter a 1:1 beam splitter, one in each input port. When the photons are identical, they will extinguish each other. If they become more distinguishable, the probability of detection will increase. In this way the interferometer can accurately measure bandwidth, path lengths and timing.</p><p>When a photon enters a beam splitter, there are two possibilities: it will either be reflected or transmitted. The relative probabilities of transmission and reflection are determined by the reflectivity of the beam splitter. Here, we assume a 1:1 beam splitter, in which a photon has equal probability of being reflected and transmitted.<br><img src="Photons_displaying_the_Hong–Ou–Mandel_effect.png" alt="The four possibilities of two-photon reflection and transmission are added at the amplitude level."><br>If the two photons are identical in their physical properties and indistinguishable, we cannot distinguish between the output states of possibilities 2 and 3.<br>Customarily the Hong–Ou–Mandel effect is observed using two photodetectors monitoring the output modes of the beam splitter. The coincidence rate of the detectors will drop to zero when the identical input photons overlap perfectly in time. This is called the Hong–Ou–Mandel dip, or HOM dip. The coincidence count reaches a minimum, indicated by the dotted line. The minimum drops to zero when the two photons are perfectly identical in all properties. When the two photons are perfectly distinguishable, the dip completely disappears.<br><img src="466px-HOM_visibility.png" alt="The &quot;HOM dip&quot; of coincident counts in the detectors versus relative delay between single-photon wave packets"> </p><p>In reference 2, we can find<br>\begin{equation}<br>\begin{aligned}<br>\vert \psi_f \rangle&amp;=\frac{1}{2\sqrt{2}}[(\alpha \gamma + \beta \delta)(\vert H\rangle_1 |H\rangle_2 + |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \gamma - \beta \delta)(\vert H\rangle_1 |H\rangle_2 - |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta + \beta \gamma)(\vert H\rangle_1 |V\rangle_2 + |V\rangle_1 |H\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta - \beta \gamma)(\vert H\rangle_1 |V\rangle_2 - |H\rangle_1 |V\rangle_2 )\cdot (|d\rangle_1 |c\rangle_2 - |c\rangle_1 |d\rangle_2)]<br>\end{aligned}<br>\label{phif}<br>\end{equation}<br>The probability of 2 and 3 changes from 50% to \(\frac{1}{8}|\alpha\delta-\beta\gamma|^2\)</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect</a></li><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Abstract from &lt;a href=&quot;https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;w
+      
+    
+    </summary>
+    
+      <category term="Quantum" scheme="/categories/Quantum/"/>
+    
+    
+      <category term="useful effect" scheme="/tags/useful-effect/"/>
+    
+  </entry>
   
   <entry>
     <title>Bell State and GHZ State</title>
