@@ -3,11 +3,11 @@
   <title>Gong Siqiu</title>
   
   <subtitle>USTC</subtitle>
-  <link href="/~gongsiqiu/public/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://home.ustc.edu.cn/~gongsiqiu/public/"/>
-  <updated>2018-09-07T09:10:11.193Z</updated>
-  <id>http://home.ustc.edu.cn/~gongsiqiu/public/</id>
+  <link href="/"/>
+  <updated>2018-09-09T08:49:09.913Z</updated>
+  <id>/</id>
   
   <author>
     <name>Gong Siqiu</name>
@@ -17,64 +17,89 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>The change of probability</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2238708925/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2238708925/</id>
-    <published>2018-09-07T08:41:12.000Z</published>
-    <updated>2018-09-07T09:10:11.193Z</updated>
+    <title>Degree of coherence</title>
+    <link href="/591768892/"/>
+    <id>/591768892/</id>
+    <published>2018-09-09T08:11:57.000Z</published>
+    <updated>2018-09-09T08:49:09.913Z</updated>
     
-    <content type="html"><![CDATA[<p>Two photons income a 50:50 beam splitter from a and b respectly. <img src="/~gongsiqiu/public/2238708925/spliter" alt="spliter"> There are four results. <img src="/~gongsiqiu/public/2238708925/Photons_displaying_the_Hong–Ou–Mandel_effect.png" alt="result">. If the two photons are identical in their physical properties and indistinguishable, we cannot distinguish between the output states of possibilities 2 and 3, and the probability of possibilities 2 and 3 is 50%.<br>If they arrive at the splitter simultaneously, as demonstrated in reference 1<br>\begin{equation}<br>\begin{aligned}<br>\vert \psi_f \rangle&amp;=\frac{1}{2\sqrt{2}}[(\alpha \gamma + \beta \delta)(\vert H\rangle_1 |H\rangle_2 + |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \gamma - \beta \delta)(\vert H\rangle_1 |H\rangle_2 - |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta + \beta \gamma)(\vert H\rangle_1 |V\rangle_2 + |V\rangle_1 |H\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta - \beta \gamma)(\vert H\rangle_1 |V\rangle_2 - |H\rangle_1 |V\rangle_2 )\cdot (|d\rangle_1 |c\rangle_2 - |c\rangle_1 |d\rangle_2)]<br>\end{aligned}<br>\label{phif}<br>\end{equation}<br>the probability of 2 and 3 changes from 50% to \(\frac{1}{8}|\alpha\delta-\beta\gamma|^2\)<br>In section 3.2.2 of reference 1, which explains the concept of quantum teleportation, the probability of 2 and 3 changes to 25%. Because photon 2 and 3 are entangled and by rewriting the state of photon 1,2 and 3 it is easy to find that the probability of \(|\Psi^-\rangle_{12}\) is 25%. And we can find in eq(1)) that \(|\Psi^-\rangle_{12}\)means probability of 2 and 3 happens.</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>In quantum optics, correlation functions are used to characterize the statistical and coherence properties of an electromagnetic field. The degree of coherence is the normalized correlation of electric fields. In its simplest form, termed \(g^{(1)}\), it is useful for quantifying the coherence between two electric fields, as measured in a Michelson or other linear optical interferometer. The correlation between pairs of fields, \(g^{(2)}\), typically is used to find the statistical character of intensity fluctuations. First order correlation is actually the amplitude-amplitude correlation and the second order correlation is the intensity-intensity correlation. It is also used to differentiate between states of light that require a quantum mechanical description and those for which classical fields are sufficient. Analogous considerations apply to any Bose field in subatomic physics, in particular to mesons (cf. Bose–Einstein correlations).</p><p>The normalized first order correlation function is written as:</p><p>$$<br>{ g^{(1)}(\mathbf {r} <em>{1},t</em>{1};\mathbf {r} <em>{2},t</em>{2})={\frac {|\left\langle E^{<em>}(\mathbf {r} <em>{1},t</em>{1})E(\mathbf {r} <em>{2},t</em>{2})\right\rangle |}{\left[\left\langle \left|E(\mathbf {r} <em>{1},t</em>{1})\right|^{2}\right\rangle \left\langle \left|E(\mathbf {r} <em>{2},t</em>{2})\right|^{2}\right\rangle \right]^{1/2}}}} {\displaystyle g^{(1)}(\mathbf {r} <em>{1},t</em>{1};\mathbf {r} <em>{2},t</em>{2})={\frac {|\left\langle E^{</em>}(\mathbf {r} <em>{1},t</em>{1})E(\mathbf {r} <em>{2},t</em>{2})\right\rangle |}{\left[\left\langle \left|E(\mathbf {r} <em>{1},t</em>{1})\right|^{2}\right\rangle \left\langle \left|E(\mathbf {r} <em>{2},t</em>{2})\right|^{2}\right\rangle \right]^{1/2}}}}<br>$$</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Degree_of_coherence" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Degree_of_coherence</a></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Two photons income a 50:50 beam splitter from a and b respectly. &lt;img src=&quot;/~gongsiqiu/public/2238708925/spliter&quot; alt=&quot;spliter&quot;&gt; There ar
+        &lt;p&gt;In quantum optics, correlation functions are used to characterize the statistical and coherence properties of an electromagnetic field. T
       
     
     </summary>
     
-      <category term="Quantum" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Quantum/"/>
+      <category term="Quantum" scheme="/categories/Quantum/"/>
     
     
-      <category term="summary" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/summary/"/>
+      <category term="important index function" scheme="/tags/important-index-function/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The change of probability</title>
+    <link href="/2238708925/"/>
+    <id>/2238708925/</id>
+    <published>2018-09-07T08:41:12.000Z</published>
+    <updated>2018-09-09T08:25:22.038Z</updated>
+    
+    <content type="html"><![CDATA[<p>Two photons income a 50:50 beam splitter from a and b respectly. <img src="/splitter.pdf" alt="splitter"> There are four results. <img src="/Photons_displaying_the_Hong–Ou–Mandel_effect.png" alt="result">. If the two photons are identical in their physical properties and indistinguishable, we cannot distinguish between the output states of possibilities 2 and 3, and the probability of possibilities 2 and 3 is 50%.<br>If they arrive at the splitter simultaneously, as demonstrated in reference 1<br>\begin{equation}<br>\begin{aligned}<br>\vert \psi_f \rangle&amp;=\frac{1}{2\sqrt{2}}[(\alpha \gamma + \beta \delta)(\vert H\rangle_1 |H\rangle_2 + |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \gamma - \beta \delta)(\vert H\rangle_1 |H\rangle_2 - |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta + \beta \gamma)(\vert H\rangle_1 |V\rangle_2 + |V\rangle_1 |H\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta - \beta \gamma)(\vert H\rangle_1 |V\rangle_2 - |H\rangle_1 |V\rangle_2 )\cdot (|d\rangle_1 |c\rangle_2 - |c\rangle_1 |d\rangle_2)]<br>\end{aligned}<br>\label{phif}<br>\end{equation}<br>the probability of 2 and 3 changes from 50% to \(\frac{1}{8}|\alpha\delta-\beta\gamma|^2\)<br>In section 3.2.2 of reference 1, which explains the concept of quantum teleportation, the probability of 2 and 3 changes to 25%. Because photon 2 and 3 are entangled and by rewriting the state of photon 1,2 and 3 it is easy to find that the probability of \(|\Psi^-\rangle_{12}\) is 25%. And we can find in eq(1)) that \(|\Psi^-\rangle_{12}\)means probability of 2 and 3 happens.</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Two photons income a 50:50 beam splitter from a and b respectly. &lt;img src=&quot;/splitter.pdf&quot; alt=&quot;splitter&quot;&gt; There are four results. &lt;img sr
+      
+    
+    </summary>
+    
+      <category term="Quantum" scheme="/categories/Quantum/"/>
+    
+    
+      <category term="summary" scheme="/tags/summary/"/>
     
   </entry>
   
   <entry>
     <title>Hong–Ou–Mandel effect</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/1603040770/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/1603040770/</id>
+    <link href="/1603040770/"/>
+    <id>/1603040770/</id>
     <published>2018-09-07T07:41:10.000Z</published>
     <updated>2018-09-07T08:52:54.237Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Abstract from <a href="https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect" rel="external nofollow noopener noreferrer" target="_blank">wikipedia</a></p></blockquote><p>The effect occurs when two identical single-photon waves enter a 1:1 beam splitter, one in each input port. When the photons are identical, they will extinguish each other. If they become more distinguishable, the probability of detection will increase. In this way the interferometer can accurately measure bandwidth, path lengths and timing.</p><p>When a photon enters a beam splitter, there are two possibilities: it will either be reflected or transmitted. The relative probabilities of transmission and reflection are determined by the reflectivity of the beam splitter. Here, we assume a 1:1 beam splitter, in which a photon has equal probability of being reflected and transmitted.<br><img src="/~gongsiqiu/public/1603040770/Photons_displaying_the_Hong–Ou–Mandel_effect.png" alt="The four possibilities of two-photon reflection and transmission are added at the amplitude level."><br>If the two photons are identical in their physical properties and indistinguishable, we cannot distinguish between the output states of possibilities 2 and 3.<br>Customarily the Hong–Ou–Mandel effect is observed using two photodetectors monitoring the output modes of the beam splitter. The coincidence rate of the detectors will drop to zero when the identical input photons overlap perfectly in time. This is called the Hong–Ou–Mandel dip, or HOM dip. The coincidence count reaches a minimum, indicated by the dotted line. The minimum drops to zero when the two photons are perfectly identical in all properties. When the two photons are perfectly distinguishable, the dip completely disappears.<br><img src="/~gongsiqiu/public/1603040770/466px-HOM_visibility.png" alt="The &quot;HOM dip&quot; of coincident counts in the detectors versus relative delay between single-photon wave packets"> </p><p>In reference 2, we can find<br>\begin{equation}<br>\begin{aligned}<br>\vert \psi_f \rangle&amp;=\frac{1}{2\sqrt{2}}[(\alpha \gamma + \beta \delta)(\vert H\rangle_1 |H\rangle_2 + |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \gamma - \beta \delta)(\vert H\rangle_1 |H\rangle_2 - |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta + \beta \gamma)(\vert H\rangle_1 |V\rangle_2 + |V\rangle_1 |H\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta - \beta \gamma)(\vert H\rangle_1 |V\rangle_2 - |H\rangle_1 |V\rangle_2 )\cdot (|d\rangle_1 |c\rangle_2 - |c\rangle_1 |d\rangle_2)]<br>\end{aligned}<br>\label{phif}<br>\end{equation}<br>The probability of 2 and 3 changes from 50% to \(\frac{1}{8}|\alpha\delta-\beta\gamma|^2\)</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect" rel="external nofollow noopener noreferrer" target="_blank">https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect</a></li><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Abstract from <a href="https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect" target="_blank" rel="noopener">wikipedia</a></p></blockquote><p>The effect occurs when two identical single-photon waves enter a 1:1 beam splitter, one in each input port. When the photons are identical, they will extinguish each other. If they become more distinguishable, the probability of detection will increase. In this way the interferometer can accurately measure bandwidth, path lengths and timing.</p><p>When a photon enters a beam splitter, there are two possibilities: it will either be reflected or transmitted. The relative probabilities of transmission and reflection are determined by the reflectivity of the beam splitter. Here, we assume a 1:1 beam splitter, in which a photon has equal probability of being reflected and transmitted.<br><img src="/Photons_displaying_the_Hong–Ou–Mandel_effect.png" alt="The four possibilities of two-photon reflection and transmission are added at the amplitude level."><br>If the two photons are identical in their physical properties and indistinguishable, we cannot distinguish between the output states of possibilities 2 and 3.<br>Customarily the Hong–Ou–Mandel effect is observed using two photodetectors monitoring the output modes of the beam splitter. The coincidence rate of the detectors will drop to zero when the identical input photons overlap perfectly in time. This is called the Hong–Ou–Mandel dip, or HOM dip. The coincidence count reaches a minimum, indicated by the dotted line. The minimum drops to zero when the two photons are perfectly identical in all properties. When the two photons are perfectly distinguishable, the dip completely disappears.<br><img src="/466px-HOM_visibility.png" alt="The &quot;HOM dip&quot; of coincident counts in the detectors versus relative delay between single-photon wave packets"> </p><p>In reference 2, we can find<br>\begin{equation}<br>\begin{aligned}<br>\vert \psi_f \rangle&amp;=\frac{1}{2\sqrt{2}}[(\alpha \gamma + \beta \delta)(\vert H\rangle_1 |H\rangle_2 + |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \gamma - \beta \delta)(\vert H\rangle_1 |H\rangle_2 - |V\rangle_1 |V\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta + \beta \gamma)(\vert H\rangle_1 |V\rangle_2 + |V\rangle_1 |H\rangle_2 )\cdot i(|c\rangle_1 |c\rangle_2 + |d\rangle_1 |d\rangle_2)\\<br>&amp;\phantom{=\frac{1}{2\sqrt{2}}}+(\alpha \delta - \beta \gamma)(\vert H\rangle_1 |V\rangle_2 - |H\rangle_1 |V\rangle_2 )\cdot (|d\rangle_1 |c\rangle_2 - |c\rangle_1 |d\rangle_2)]<br>\end{aligned}<br>\label{phif}<br>\end{equation}<br>The probability of 2 and 3 changes from 50% to \(\frac{1}{8}|\alpha\delta-\beta\gamma|^2\)</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect</a></li><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
     
     <summary type="html">
     
       
       
         &lt;blockquote&gt;
-&lt;p&gt;Abstract from &lt;a href=&quot;https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect&quot; rel=&quot;external nofollow noopener 
+&lt;p&gt;Abstract from &lt;a href=&quot;https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;w
       
     
     </summary>
     
-      <category term="Quantum" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Quantum/"/>
+      <category term="Quantum" scheme="/categories/Quantum/"/>
     
     
-      <category term="useful effect" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/useful-effect/"/>
+      <category term="useful effect" scheme="/tags/useful-effect/"/>
     
   </entry>
   
   <entry>
     <title>Bell State and GHZ State</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/130017201/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/130017201/</id>
+    <link href="/130017201/"/>
+    <id>/130017201/</id>
     <published>2018-09-04T11:45:15.000Z</published>
     <updated>2018-09-04T13:27:41.669Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="What-is-Bell-states"><a href="#What-is-Bell-states" class="headerlink" title="What is Bell states?"></a>What is <a href="https://en.wikipedia.org/wiki/Bell_state" rel="external nofollow noopener noreferrer" target="_blank">Bell states</a>?</h1><p>The Bell states are four specific maximally entangled quantum states of two qubits.<br>\begin{equation}<br>\begin{aligned}<br>\vert \Psi^\pm \rangle = \frac{1}{\sqrt{2}}(\vert 0\rangle\vert 1\rangle\pm\vert 1\rangle\vert 0\rangle)\\<br>\vert \Phi^\pm \rangle = \frac{1}{\sqrt{2}}(\vert 0\rangle\vert 0\rangle\pm\vert 1\rangle\vert 1\rangle)<br>\end{aligned}<br>\end{equation}</p><h1 id="How-to-generate-and-measure-Bell-states"><a href="#How-to-generate-and-measure-Bell-states" class="headerlink" title="How to generate and measure Bell states?"></a>How to generate and measure Bell states?</h1><p>It is easy to generate and measure Bell states with Hadamard gate and Controled-Not gate.<br><img src="/~gongsiqiu/public/130017201/BellMeasurement.png" alt="The Bell measurement: the gates on the left hand side allow us to generate the four Bell states from the four possible different inputs. Reversing the order of the gates (right-hand side of the diagram) corresponds to a Bell measurement."><br>The Bell measurement: the gates on the left hand side allow us to generate the four Bell states from the four possible different inputs. Reversing the order of the gates (right-hand side of the diagram) corresponds to a Bell measurement.</p><h2 id="Hadamard-gate"><a href="#Hadamard-gate" class="headerlink" title="Hadamard gate"></a>Hadamard gate</h2><p>It is equivalent to the following unitary transformation:<br>\begin{equation}<br>\begin{aligned}<br>\vert 0\rangle \rightarrow \frac{1}{\sqrt{2}}(\vert 0\rangle+\vert 1\rangle)\\<br>\vert 1\rangle \rightarrow \frac{1}{\sqrt{2}}(\vert 0\rangle-\vert 1\rangle)<br>\end{aligned}<br>\end{equation}</p><h2 id="Controled-Not-gate"><a href="#Controled-Not-gate" class="headerlink" title="Controled-Not gate"></a>Controled-Not gate</h2><p>It flips the second of two qubits if and only if the first is $\vert 1\rangle$, namely</p><p>\begin{equation}<br>\begin{aligned}<br>\vert 0\rangle\vert 0\rangle \rightarrow \vert 0\rangle\vert 0\rangle\\<br>\vert 0\rangle\vert 1\rangle \rightarrow \vert 0\rangle\vert 1\rangle\\<br>\vert 1\rangle\vert 0\rangle \rightarrow \vert 1\rangle\vert 1\rangle\\<br>\vert 1\rangle\vert 1\rangle \rightarrow \vert 1\rangle\vert 0\rangle<br>\end{aligned}<br>\end{equation}<br>The first qubit control whether apply ‘NOT’ on the other qubit.</p><h1 id="Greenberger–Horne–Zeilinger-state-GHZ-state"><a href="#Greenberger–Horne–Zeilinger-state-GHZ-state" class="headerlink" title="Greenberger–Horne–Zeilinger state (GHZ state)"></a>Greenberger–Horne–Zeilinger state (<a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state" rel="external nofollow noopener noreferrer" target="_blank">GHZ state</a>)</h1><p>Maximally entangled three-particle states, that is,<br>\begin{equation}<br>\begin{aligned}<br> \frac{1}{\sqrt{2}}(\vert a\rangle\vert b\rangle\vert c\rangle\pm\vert \overline{a}\rangle\vert \overline{b}\rangle\vert \overline{c}\rangle)<br>\end{aligned}<br>\end{equation}<br>where a, b and c can each take the values 0 and 1 and \(\overline{a}\) and \(\overline{b}\)and \(\overline{c}\) denote NOT-a and NOT-b<br>I feel confused in this place. Wikipedia says GHZ state is only \(<br>{\displaystyle |\mathrm {GHZ} \rangle ={\frac {|0\rangle ^{\otimes M}+|1\rangle ^{\otimes M}}{\sqrt {2}}}.}<br>\) which is different with this paper “Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan”</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Bell_state" rel="external nofollow noopener noreferrer" target="_blank">https://en.wikipedia.org/wiki/Bell_state</a></li><li><a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state" rel="external nofollow noopener noreferrer" target="_blank">https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state</a></li><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="What-is-Bell-states"><a href="#What-is-Bell-states" class="headerlink" title="What is Bell states?"></a>What is <a href="https://en.wikipedia.org/wiki/Bell_state" target="_blank" rel="noopener">Bell states</a>?</h1><p>The Bell states are four specific maximally entangled quantum states of two qubits.<br>\begin{equation}<br>\begin{aligned}<br>\vert \Psi^\pm \rangle = \frac{1}{\sqrt{2}}(\vert 0\rangle\vert 1\rangle\pm\vert 1\rangle\vert 0\rangle)\\<br>\vert \Phi^\pm \rangle = \frac{1}{\sqrt{2}}(\vert 0\rangle\vert 0\rangle\pm\vert 1\rangle\vert 1\rangle)<br>\end{aligned}<br>\end{equation}</p><h1 id="How-to-generate-and-measure-Bell-states"><a href="#How-to-generate-and-measure-Bell-states" class="headerlink" title="How to generate and measure Bell states?"></a>How to generate and measure Bell states?</h1><p>It is easy to generate and measure Bell states with Hadamard gate and Controled-Not gate.<br><img src="/BellMeasurement.png" alt="The Bell measurement: the gates on the left hand side allow us to generate the four Bell states from the four possible different inputs. Reversing the order of the gates (right-hand side of the diagram) corresponds to a Bell measurement."><br>The Bell measurement: the gates on the left hand side allow us to generate the four Bell states from the four possible different inputs. Reversing the order of the gates (right-hand side of the diagram) corresponds to a Bell measurement.</p><h2 id="Hadamard-gate"><a href="#Hadamard-gate" class="headerlink" title="Hadamard gate"></a>Hadamard gate</h2><p>It is equivalent to the following unitary transformation:<br>\begin{equation}<br>\begin{aligned}<br>\vert 0\rangle \rightarrow \frac{1}{\sqrt{2}}(\vert 0\rangle+\vert 1\rangle)\\<br>\vert 1\rangle \rightarrow \frac{1}{\sqrt{2}}(\vert 0\rangle-\vert 1\rangle)<br>\end{aligned}<br>\end{equation}</p><h2 id="Controled-Not-gate"><a href="#Controled-Not-gate" class="headerlink" title="Controled-Not gate"></a>Controled-Not gate</h2><p>It flips the second of two qubits if and only if the first is $\vert 1\rangle$, namely</p><p>\begin{equation}<br>\begin{aligned}<br>\vert 0\rangle\vert 0\rangle \rightarrow \vert 0\rangle\vert 0\rangle\\<br>\vert 0\rangle\vert 1\rangle \rightarrow \vert 0\rangle\vert 1\rangle\\<br>\vert 1\rangle\vert 0\rangle \rightarrow \vert 1\rangle\vert 1\rangle\\<br>\vert 1\rangle\vert 1\rangle \rightarrow \vert 1\rangle\vert 0\rangle<br>\end{aligned}<br>\end{equation}<br>The first qubit control whether apply ‘NOT’ on the other qubit.</p><h1 id="Greenberger–Horne–Zeilinger-state-GHZ-state"><a href="#Greenberger–Horne–Zeilinger-state-GHZ-state" class="headerlink" title="Greenberger–Horne–Zeilinger state (GHZ state)"></a>Greenberger–Horne–Zeilinger state (<a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state" target="_blank" rel="noopener">GHZ state</a>)</h1><p>Maximally entangled three-particle states, that is,<br>\begin{equation}<br>\begin{aligned}<br> \frac{1}{\sqrt{2}}(\vert a\rangle\vert b\rangle\vert c\rangle\pm\vert \overline{a}\rangle\vert \overline{b}\rangle\vert \overline{c}\rangle)<br>\end{aligned}<br>\end{equation}<br>where a, b and c can each take the values 0 and 1 and \(\overline{a}\) and \(\overline{b}\)and \(\overline{c}\) denote NOT-a and NOT-b<br>I feel confused in this place. Wikipedia says GHZ state is only \(<br>{\displaystyle |\mathrm {GHZ} \rangle ={\frac {|0\rangle ^{\otimes M}+|1\rangle ^{\otimes M}}{\sqrt {2}}}.}<br>\) which is different with this paper “Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan”</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol><li><a href="https://en.wikipedia.org/wiki/Bell_state" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Bell_state</a></li><li><a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state</a></li><li>Quantum Teleportation and Multi-photon Entanglement, Jian-Wei Pan</li></ol>]]></content>
     
     <summary type="html">
     
@@ -85,17 +110,17 @@
     
     </summary>
     
-      <category term="Quantum" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Quantum/"/>
+      <category term="Quantum" scheme="/categories/Quantum/"/>
     
     
-      <category term="Basic Theory" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Basic-Theory/"/>
+      <category term="Basic Theory" scheme="/tags/Basic-Theory/"/>
     
   </entry>
   
   <entry>
     <title>Start of Quantum Communication</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/3133353157/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/3133353157/</id>
+    <link href="/3133353157/"/>
+    <id>/3133353157/</id>
     <published>2018-08-20T13:02:49.000Z</published>
     <updated>2018-08-29T08:29:37.862Z</updated>
     
@@ -110,17 +135,17 @@
     
     </summary>
     
-      <category term="Quantum" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Quantum/"/>
+      <category term="Quantum" scheme="/categories/Quantum/"/>
     
     
-      <category term="Start" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Start/"/>
+      <category term="Start" scheme="/tags/Start/"/>
     
   </entry>
   
   <entry>
     <title>液体沸腾条件</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/3730876896/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/3730876896/</id>
+    <link href="/3730876896/"/>
+    <id>/3730876896/</id>
     <published>2018-07-06T14:26:01.000Z</published>
     <updated>2018-07-07T09:57:36.771Z</updated>
     
@@ -136,17 +161,17 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="Thermology" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Thermology/"/>
+      <category term="Thermology" scheme="/categories/Thermology/"/>
     
     
-      <category term="liquid" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/liquid/"/>
+      <category term="liquid" scheme="/tags/liquid/"/>
     
   </entry>
   
   <entry>
     <title>梯度，散度，旋度</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/68592814/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/68592814/</id>
+    <link href="/68592814/"/>
+    <id>/68592814/</id>
     <published>2018-05-20T12:16:41.000Z</published>
     <updated>2018-07-07T10:16:32.643Z</updated>
     
@@ -161,19 +186,19 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="/categories/Mathematical-analysis/"/>
     
     
-      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="/tags/multivariable-analysis/"/>
     
-      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
+      <category term="exercise" scheme="/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>OpenFoam 模型的注释</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/3130324815/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/3130324815/</id>
+    <link href="/3130324815/"/>
+    <id>/3130324815/</id>
     <published>2018-05-01T10:21:02.000Z</published>
     <updated>2018-06-29T11:50:06.761Z</updated>
     
@@ -188,17 +213,17 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
+      <category term="CFD" scheme="/categories/CFD/"/>
     
     
-      <category term="OpenFoam" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/OpenFoam/"/>
+      <category term="OpenFoam" scheme="/tags/OpenFoam/"/>
     
   </entry>
   
   <entry>
     <title>Analysis quiz</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/1566409618/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/1566409618/</id>
+    <link href="/1566409618/"/>
+    <id>/1566409618/</id>
     <published>2018-04-28T14:37:02.000Z</published>
     <updated>2018-07-07T10:16:12.285Z</updated>
     
@@ -213,25 +238,25 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="/categories/Mathematical-analysis/"/>
     
     
-      <category term="quiz" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/quiz/"/>
+      <category term="quiz" scheme="/tags/quiz/"/>
     
-      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="/tags/multivariable-analysis/"/>
     
-      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
+      <category term="differential" scheme="/tags/differential/"/>
     
   </entry>
   
   <entry>
     <title>Note on Tobias Holzmann&#39;s Tesla&#39;s One-Way-Valve tutorial</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/1769262158/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/1769262158/</id>
+    <link href="/1769262158/"/>
+    <id>/1769262158/</id>
     <published>2018-04-23T11:16:56.000Z</published>
     <updated>2018-06-29T11:50:06.757Z</updated>
     
-    <content type="html"><![CDATA[<p>Two weeks ago, I found Tobias Holzmann’s <a href="https://holzmann-cfd.de/openfoam/openfoam-tutorials/meshing-running/tesla-s-one-way-valve" rel="external nofollow noopener noreferrer" target="_blank">Tesla’s One-Way-Valve</a>. It is great but there is no explaination. So, I write this page to record some troubles I met in it and how I solved it.</p><ol><li><p>The first trouble I met is that the teslaOneWayValveBackup.py<br>couldn’t find the step file even if I have changed the directory.<br>I solved this problem by importing the step file to salome and<br>dumping the study, then copying the required command to<br>teslaOneWayValveBackup.py. It is interesting that sometimes there<br>is no difference between changing directory manually and it, but it<br>do work while the other not.</p><p><strong>The reality is that I had inputted the wrong address.</strong></p></li><li><p>The second problem is that when I changed the regionSTL.stl to my<br>own, it would raise an error that there is no definition for<br>defaultFaces.<br>The first situation is that I didn’t set boundary condition. At<br>first, I just copied a stl file there, which had only one solid. So<br>I need to set the BCs.<br>The second situation is that the stl may be not waterproof. At<br>first I made groups in salome, exported them one by one and then<br>merged them to one file after adding BC (solid back …). Using surfaceCheck it, I found it wasn’t closed. In this case, snappyHexmesh generated an extra defaultFaces boundary. To solve it, I also do these above, but take notice that when make group, the main shape should be the whole object.<br>The proceduare is like this:</p><blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>export stl one by one<br>edit and merge<br>run</p></blockquote><p>Up to now I just succeeded one time, maybe it is correct.</p><p><strong>Finally I gave up.</strong> I use gmsh or Salome to mesh it and set boundary<br>conditons. It is easy to use gmsh. So I want to note how to mesh in<br>Salome.</p><blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>Mesh -&gt;Create Mesh , choose NETGEN-1D-2D-3D<br>Create Group from Geometry<br>Compute<br>Export Mesh as UNV file<br>ideasUnvToFoam<br>edit the boundary<br>pimpleFoam</p></blockquote></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>Two weeks ago, I found Tobias Holzmann’s <a href="https://holzmann-cfd.de/openfoam/openfoam-tutorials/meshing-running/tesla-s-one-way-valve" target="_blank" rel="noopener">Tesla’s One-Way-Valve</a>. It is great but there is no explaination. So, I write this page to record some troubles I met in it and how I solved it.</p><ol><li><p>The first trouble I met is that the teslaOneWayValveBackup.py<br>couldn’t find the step file even if I have changed the directory.<br>I solved this problem by importing the step file to salome and<br>dumping the study, then copying the required command to<br>teslaOneWayValveBackup.py. It is interesting that sometimes there<br>is no difference between changing directory manually and it, but it<br>do work while the other not.</p><p><strong>The reality is that I had inputted the wrong address.</strong></p></li><li><p>The second problem is that when I changed the regionSTL.stl to my<br>own, it would raise an error that there is no definition for<br>defaultFaces.<br>The first situation is that I didn’t set boundary condition. At<br>first, I just copied a stl file there, which had only one solid. So<br>I need to set the BCs.<br>The second situation is that the stl may be not waterproof. At<br>first I made groups in salome, exported them one by one and then<br>merged them to one file after adding BC (solid back …). Using surfaceCheck it, I found it wasn’t closed. In this case, snappyHexmesh generated an extra defaultFaces boundary. To solve it, I also do these above, but take notice that when make group, the main shape should be the whole object.<br>The proceduare is like this:</p><blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>export stl one by one<br>edit and merge<br>run</p></blockquote><p>Up to now I just succeeded one time, maybe it is correct.</p><p><strong>Finally I gave up.</strong> I use gmsh or Salome to mesh it and set boundary<br>conditons. It is easy to use gmsh. So I want to note how to mesh in<br>Salome.</p><blockquote><p>Geometry -&gt;import step<br>New Entity -&gt; Explode (explode the step object)<br>New Entity -&gt;create group (set the boundary condition)<br>Mesh -&gt;Create Mesh , choose NETGEN-1D-2D-3D<br>Create Group from Geometry<br>Compute<br>Export Mesh as UNV file<br>ideasUnvToFoam<br>edit the boundary<br>pimpleFoam</p></blockquote></li></ol>]]></content>
     
     <summary type="html">
     
@@ -242,17 +267,17 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="CFD" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/CFD/"/>
+      <category term="CFD" scheme="/categories/CFD/"/>
     
     
-      <category term="tesla" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla/"/>
+      <category term="tesla" scheme="/tags/tesla/"/>
     
   </entry>
   
   <entry>
     <title>n重积分</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2397580038/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2397580038/</id>
+    <link href="/2397580038/"/>
+    <id>/2397580038/</id>
     <published>2018-04-21T12:12:29.000Z</published>
     <updated>2018-07-07T10:16:20.748Z</updated>
     
@@ -267,23 +292,23 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="/categories/Mathematical-analysis/"/>
     
     
-      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="/tags/multivariable-analysis/"/>
     
-      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
+      <category term="exercise" scheme="/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>IYPT</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/1921520941/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/1921520941/</id>
+    <link href="/1921520941/"/>
+    <id>/1921520941/</id>
     <published>2018-04-18T14:50:43.000Z</published>
     <updated>2018-06-29T11:50:06.757Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="04-10"><a href="#04-10" class="headerlink" title="04-10"></a>04-10</h1><p>选定特斯拉阀，下载CAD模型，寻找CAD软件，仿真软件。ADINA,失败。</p><h1 id="04-11"><a href="#04-11" class="headerlink" title="04-11"></a>04-11</h1><p>找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0，salome)，运行salome script失败,联系作者。</p><h1 id="04-12"><a href="#04-12" class="headerlink" title="04-12"></a>04-12</h1><p>第一次打印，太粗糙，漏水。找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0)，运行失败。更换至相应版本(5.x)。</p><h1 id="04-13"><a href="#04-13" class="headerlink" title="04-13"></a>04-13</h1><p>继续探索该例程，安装相应版本软件，例程运行成功。作者表示了解了情况，六月份前处理,此时我已解决该问题。第二次打印，加上圆柱接口，但打印出问题，模型翘边，一侧圆柱变扁。另外发现例程不能分析自己的文件，因为自己的stl没有设置bo;undary。</p><h1 id="04-14"><a href="#04-14" class="headerlink" title="04-14"></a>04-14</h1><p>安装fluent，但是虚拟机带不动……</p><h1 id="04-15"><a href="#04-15" class="headerlink" title="04-15"></a>04-15</h1><p>尝试用fluent设置boundary失败</p><h1 id="04-16"><a href="#04-16" class="headerlink" title="04-16"></a>04-16</h1><p>安装pointwise失败。第三次打印，两边翘起。</p><h1 id="04-17"><a href="#04-17" class="headerlink" title="04-17"></a>04-17</h1><p>尝试用salome导出各个group再合并，生成的boundary多出8个face，例程运行失败。安装pointwise成功，但只能导出网格，而不是设置好boundary的stl。第四次打印，调试打印机失败，从打印变形到打不出来……</p><h1 id="04-18"><a href="#04-18" class="headerlink" title="04-18"></a>04-18</h1><p>转向simflow。按教程操作，使用教程文件成功，使用自己文件失败。第五次打印，终于正常打印成功。</p><h1 id="04-19"><a href="#04-19" class="headerlink" title="04-19"></a>04-19</h1><p>打印机又出故障，喷嘴被糊。经过调整修好。安装ANSYS,似乎安装成功。测水流速差异，效果不明显。制作挡风板，用乒乓球测风速。使用吹风机风力太小，使用打气筒风力不恒定。快结束时得知可以用气垫导轨的气泵，测试风力足够，但需要一个转接口。</p><h1 id="04-23"><a href="#04-23" class="headerlink" title="04-23"></a>04-23</h1><p>今天运行openfoam成功，仿真模拟有希望了，希望以后不要出问题。</p><h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>OpenFOAM还是有问题。最终将就着用案例自带模型。另外打印机出故障的原因是没有使用机器自带的切片软件。最后我们测了特斯拉阀对水、空气、沙子的影响，结果不理想，只能勉强写结题报告。</p><p>结题报告 <a href="http://rec.ustc.edu.cn/s/jdqoez" rel="external nofollow noopener noreferrer" target="_blank">http://rec.ustc.edu.cn/s/jdqoez</a>    提取密码:vjijve</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="04-10"><a href="#04-10" class="headerlink" title="04-10"></a>04-10</h1><p>选定特斯拉阀，下载CAD模型，寻找CAD软件，仿真软件。ADINA,失败。</p><h1 id="04-11"><a href="#04-11" class="headerlink" title="04-11"></a>04-11</h1><p>找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0，salome)，运行salome script失败,联系作者。</p><h1 id="04-12"><a href="#04-12" class="headerlink" title="04-12"></a>04-12</h1><p>第一次打印，太粗糙，漏水。找到一个特斯拉阀仿真例程，安装相应软件(OpenFoam 5.0)，运行失败。更换至相应版本(5.x)。</p><h1 id="04-13"><a href="#04-13" class="headerlink" title="04-13"></a>04-13</h1><p>继续探索该例程，安装相应版本软件，例程运行成功。作者表示了解了情况，六月份前处理,此时我已解决该问题。第二次打印，加上圆柱接口，但打印出问题，模型翘边，一侧圆柱变扁。另外发现例程不能分析自己的文件，因为自己的stl没有设置bo;undary。</p><h1 id="04-14"><a href="#04-14" class="headerlink" title="04-14"></a>04-14</h1><p>安装fluent，但是虚拟机带不动……</p><h1 id="04-15"><a href="#04-15" class="headerlink" title="04-15"></a>04-15</h1><p>尝试用fluent设置boundary失败</p><h1 id="04-16"><a href="#04-16" class="headerlink" title="04-16"></a>04-16</h1><p>安装pointwise失败。第三次打印，两边翘起。</p><h1 id="04-17"><a href="#04-17" class="headerlink" title="04-17"></a>04-17</h1><p>尝试用salome导出各个group再合并，生成的boundary多出8个face，例程运行失败。安装pointwise成功，但只能导出网格，而不是设置好boundary的stl。第四次打印，调试打印机失败，从打印变形到打不出来……</p><h1 id="04-18"><a href="#04-18" class="headerlink" title="04-18"></a>04-18</h1><p>转向simflow。按教程操作，使用教程文件成功，使用自己文件失败。第五次打印，终于正常打印成功。</p><h1 id="04-19"><a href="#04-19" class="headerlink" title="04-19"></a>04-19</h1><p>打印机又出故障，喷嘴被糊。经过调整修好。安装ANSYS,似乎安装成功。测水流速差异，效果不明显。制作挡风板，用乒乓球测风速。使用吹风机风力太小，使用打气筒风力不恒定。快结束时得知可以用气垫导轨的气泵，测试风力足够，但需要一个转接口。</p><h1 id="04-23"><a href="#04-23" class="headerlink" title="04-23"></a>04-23</h1><p>今天运行openfoam成功，仿真模拟有希望了，希望以后不要出问题。</p><h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>OpenFOAM还是有问题。最终将就着用案例自带模型。另外打印机出故障的原因是没有使用机器自带的切片软件。最后我们测了特斯拉阀对水、空气、沙子的影响，结果不理想，只能勉强写结题报告。</p><p>结题报告 <a href="http://rec.ustc.edu.cn/s/jdqoez" target="_blank" rel="noopener">http://rec.ustc.edu.cn/s/jdqoez</a>    提取密码:vjijve</p>]]></content>
     
     <summary type="html">
     
@@ -295,17 +320,17 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="IYPT" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/IYPT/"/>
+      <category term="IYPT" scheme="/categories/IYPT/"/>
     
     
-      <category term="tesla valve" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/tesla-valve/"/>
+      <category term="tesla valve" scheme="/tags/tesla-valve/"/>
     
   </entry>
   
   <entry>
     <title>Supplementary task 9</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/2312742837/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/2312742837/</id>
+    <link href="/2312742837/"/>
+    <id>/2312742837/</id>
     <published>2018-04-08T07:32:06.000Z</published>
     <updated>2018-07-07T10:16:53.310Z</updated>
     
@@ -320,21 +345,21 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="Mathematical analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/Mathematical-analysis/"/>
+      <category term="Mathematical analysis" scheme="/categories/Mathematical-analysis/"/>
     
     
-      <category term="multivariable analysis" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/multivariable-analysis/"/>
+      <category term="multivariable analysis" scheme="/tags/multivariable-analysis/"/>
     
-      <category term="differential" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/differential/"/>
+      <category term="differential" scheme="/tags/differential/"/>
     
-      <category term="exercise" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/exercise/"/>
+      <category term="exercise" scheme="/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>苏轼词十首</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/396674988/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/396674988/</id>
+    <link href="/396674988/"/>
+    <id>/396674988/</id>
     <published>2018-04-06T13:25:00.000Z</published>
     <updated>2018-06-29T11:50:06.761Z</updated>
     
@@ -350,19 +375,19 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="collection" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/collection/"/>
+      <category term="collection" scheme="/categories/collection/"/>
     
     
-      <category term="Su Shi" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Su-Shi/"/>
+      <category term="Su Shi" scheme="/tags/Su-Shi/"/>
     
-      <category term="ci" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/ci/"/>
+      <category term="ci" scheme="/tags/ci/"/>
     
   </entry>
   
   <entry>
     <title>A tour to Nanjing</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/4106926176/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/4106926176/</id>
+    <link href="/4106926176/"/>
+    <id>/4106926176/</id>
     <published>2018-04-06T13:22:18.000Z</published>
     <updated>2018-06-29T11:50:06.757Z</updated>
     
@@ -378,17 +403,17 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="tour" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/tour/"/>
+      <category term="tour" scheme="/categories/tour/"/>
     
     
-      <category term="Nan jing" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/Nan-jing/"/>
+      <category term="Nan jing" scheme="/tags/Nan-jing/"/>
     
   </entry>
   
   <entry>
     <title>Align underline in LaTeX</title>
-    <link href="http://home.ustc.edu.cn/~gongsiqiu/public/4041067566/"/>
-    <id>http://home.ustc.edu.cn/~gongsiqiu/public/4041067566/</id>
+    <link href="/4041067566/"/>
+    <id>/4041067566/</id>
     <published>2018-03-31T14:12:44.000Z</published>
     <updated>2018-06-29T11:50:06.761Z</updated>
     
@@ -403,10 +428,10 @@ $$A=2 \alpha \left(\frac{4 \pi}{3}\right)^\frac{1}{3},B=\nu RT$$
     
     </summary>
     
-      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/categories/LaTex/"/>
+      <category term="LaTex" scheme="/categories/LaTex/"/>
     
     
-      <category term="LaTex" scheme="http://home.ustc.edu.cn/~gongsiqiu/public/tags/LaTex/"/>
+      <category term="LaTex" scheme="/tags/LaTex/"/>
     
   </entry>
   
